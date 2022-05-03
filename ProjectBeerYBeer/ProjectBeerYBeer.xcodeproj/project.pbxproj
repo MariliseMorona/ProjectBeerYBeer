@@ -7,23 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48CFD33B2820A01E00D06965 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFD33A2820A01E00D06965 /* LoginView.swift */; };
+		48CFD33E2820A0D200D06965 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFD33D2820A0D200D06965 /* Colors.swift */; };
+		48CFD3402820A91E00D06965 /* loginBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 48CFD33F2820A91E00D06965 /* loginBeer.json */; };
+		48CFD3422820B04700D06965 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFD3412820B04700D06965 /* RoundedImage.swift */; };
+		48CFD3462820B50B00D06965 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFD3452820B50B00D06965 /* HomeViewController.swift */; };
 		48D4CEF82820958300A86078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D4CEF72820958300A86078 /* AppDelegate.swift */; };
 		48D4CEFA2820958300A86078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D4CEF92820958300A86078 /* SceneDelegate.swift */; };
-		48D4CEFC2820958300A86078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D4CEFB2820958300A86078 /* ViewController.swift */; };
-		48D4CEFF2820958300A86078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D4CEFD2820958300A86078 /* Main.storyboard */; };
+		48D4CEFC2820958300A86078 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D4CEFB2820958300A86078 /* LoginViewController.swift */; };
 		48D4CF012820958500A86078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D4CF002820958500A86078 /* Assets.xcassets */; };
 		48D4CF042820958500A86078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D4CF022820958500A86078 /* LaunchScreen.storyboard */; };
+		48D4CF0D2820981400A86078 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 48D4CF0C2820981400A86078 /* Lottie */; };
+		48D4CF0F2820994600A86078 /* launchBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 48D4CF0E2820994600A86078 /* launchBeer.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48CFD33A2820A01E00D06965 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		48CFD33D2820A0D200D06965 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		48CFD33F2820A91E00D06965 /* loginBeer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginBeer.json; sourceTree = "<group>"; };
+		48CFD3412820B04700D06965 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
+		48CFD3452820B50B00D06965 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		48D4CEF42820958300A86078 /* ProjectBeerYBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectBeerYBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D4CEF72820958300A86078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48D4CEF92820958300A86078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		48D4CEFB2820958300A86078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		48D4CEFE2820958300A86078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48D4CEFB2820958300A86078 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		48D4CF002820958500A86078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48D4CF032820958500A86078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48D4CF052820958500A86078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D4CF0E2820994600A86078 /* launchBeer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launchBeer.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +42,73 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D4CF0D2820981400A86078 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		487DAF7028209E3E00E7015A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48CFD33D2820A0D200D06965 /* Colors.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		487DAF7128209E4B00E7015A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48CFD3442820B4DF00D06965 /* Home */,
+				48CFD3432820B4D200D06965 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		487DAF7228209E5400E7015A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		487DAF7328209E5D00E7015A /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				48D4CF0E2820994600A86078 /* launchBeer.json */,
+				48CFD33F2820A91E00D06965 /* loginBeer.json */,
+				48D4CF022820958500A86078 /* LaunchScreen.storyboard */,
+				48D4CF002820958500A86078 /* Assets.xcassets */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		48CFD33C2820A0B600D06965 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				48CFD3412820B04700D06965 /* RoundedImage.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		48CFD3432820B4D200D06965 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				48CFD33A2820A01E00D06965 /* LoginView.swift */,
+				48D4CEFB2820958300A86078 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		48CFD3442820B4DF00D06965 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				48CFD3452820B50B00D06965 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		48D4CEEB2820958300A86078 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +130,12 @@
 			children = (
 				48D4CEF72820958300A86078 /* AppDelegate.swift */,
 				48D4CEF92820958300A86078 /* SceneDelegate.swift */,
-				48D4CEFB2820958300A86078 /* ViewController.swift */,
-				48D4CEFD2820958300A86078 /* Main.storyboard */,
-				48D4CF002820958500A86078 /* Assets.xcassets */,
-				48D4CF022820958500A86078 /* LaunchScreen.storyboard */,
 				48D4CF052820958500A86078 /* Info.plist */,
+				48CFD33C2820A0B600D06965 /* Commons */,
+				487DAF7328209E5D00E7015A /* Files */,
+				487DAF7228209E5400E7015A /* ViewModel */,
+				487DAF7128209E4B00E7015A /* View */,
+				487DAF7028209E3E00E7015A /* Model */,
 			);
 			path = ProjectBeerYBeer;
 			sourceTree = "<group>";
@@ -83,6 +156,9 @@
 			dependencies = (
 			);
 			name = ProjectBeerYBeer;
+			packageProductDependencies = (
+				48D4CF0C2820981400A86078 /* Lottie */,
+			);
 			productName = ProjectBeerYBeer;
 			productReference = 48D4CEF42820958300A86078 /* ProjectBeerYBeer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +187,9 @@
 				Base,
 			);
 			mainGroup = 48D4CEEB2820958300A86078;
+			packageReferences = (
+				48D4CF0B2820981400A86078 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 48D4CEF52820958300A86078 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +205,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D4CF042820958500A86078 /* LaunchScreen.storyboard in Resources */,
+				48CFD3402820A91E00D06965 /* loginBeer.json in Resources */,
+				48D4CF0F2820994600A86078 /* launchBeer.json in Resources */,
 				48D4CF012820958500A86078 /* Assets.xcassets in Resources */,
-				48D4CEFF2820958300A86078 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48D4CEFC2820958300A86078 /* ViewController.swift in Sources */,
+				48D4CEFC2820958300A86078 /* LoginViewController.swift in Sources */,
+				48CFD33E2820A0D200D06965 /* Colors.swift in Sources */,
 				48D4CEF82820958300A86078 /* AppDelegate.swift in Sources */,
+				48CFD3422820B04700D06965 /* RoundedImage.swift in Sources */,
+				48CFD33B2820A01E00D06965 /* LoginView.swift in Sources */,
+				48CFD3462820B50B00D06965 /* HomeViewController.swift in Sources */,
 				48D4CEFA2820958300A86078 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +231,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		48D4CEFD2820958300A86078 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				48D4CEFE2820958300A86078 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		48D4CF022820958500A86078 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,7 +369,6 @@
 				INFOPLIST_FILE = ProjectBeerYBeer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +395,6 @@
 				INFOPLIST_FILE = ProjectBeerYBeer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48D4CF0B2820981400A86078 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48D4CF0C2820981400A86078 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48D4CF0B2820981400A86078 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48D4CEEC2820958300A86078 /* Project object */;
 }
