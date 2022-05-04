@@ -21,6 +21,12 @@ extension UIColor {
         blue: 184/255,
         alpha: 1.0)
     
+    static let backgroundColorYellowPlusLight = UIColor(
+        red: 1.00,
+        green: 0.99,
+        blue: 0.89,
+        alpha: 1.00)
+    
     static let backgroundColorCaramel = UIColor(
         red: 229/255,
         green: 201/255,

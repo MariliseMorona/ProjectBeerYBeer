@@ -12,6 +12,7 @@
 		48CFD3402820A91E00D06965 /* loginBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 48CFD33F2820A91E00D06965 /* loginBeer.json */; };
 		48CFD3422820B04700D06965 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFD3412820B04700D06965 /* RoundedImage.swift */; };
 		48CFD3462820B50B00D06965 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFD3452820B50B00D06965 /* HomeViewController.swift */; };
+		48CFD3482820B5AB00D06965 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFD3472820B5AB00D06965 /* WelcomeView.swift */; };
 		48D4CEF82820958300A86078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D4CEF72820958300A86078 /* AppDelegate.swift */; };
 		48D4CEFA2820958300A86078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D4CEF92820958300A86078 /* SceneDelegate.swift */; };
 		48D4CEFC2820958300A86078 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D4CEFB2820958300A86078 /* LoginViewController.swift */; };
@@ -19,6 +20,7 @@
 		48D4CF042820958500A86078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D4CF022820958500A86078 /* LaunchScreen.storyboard */; };
 		48D4CF0D2820981400A86078 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 48D4CF0C2820981400A86078 /* Lottie */; };
 		48D4CF0F2820994600A86078 /* launchBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 48D4CF0E2820994600A86078 /* launchBeer.json */; };
+		48E9B64A28228AFA00ED7B64 /* SearchBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E9B64928228AFA00ED7B64 /* SearchBeerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		48CFD33F2820A91E00D06965 /* loginBeer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginBeer.json; sourceTree = "<group>"; };
 		48CFD3412820B04700D06965 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		48CFD3452820B50B00D06965 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		48CFD3472820B5AB00D06965 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		48D4CEF42820958300A86078 /* ProjectBeerYBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectBeerYBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D4CEF72820958300A86078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48D4CEF92820958300A86078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +38,7 @@
 		48D4CF032820958500A86078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48D4CF052820958500A86078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D4CF0E2820994600A86078 /* launchBeer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launchBeer.json; sourceTree = "<group>"; };
+		48E9B64928228AFA00ED7B64 /* SearchBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				48CFD3452820B50B00D06965 /* HomeViewController.swift */,
+				48CFD3472820B5AB00D06965 /* WelcomeView.swift */,
+				48E9B64928228AFA00ED7B64 /* SearchBeerView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -221,8 +227,10 @@
 				48D4CEFC2820958300A86078 /* LoginViewController.swift in Sources */,
 				48CFD33E2820A0D200D06965 /* Colors.swift in Sources */,
 				48D4CEF82820958300A86078 /* AppDelegate.swift in Sources */,
+				48E9B64A28228AFA00ED7B64 /* SearchBeerView.swift in Sources */,
 				48CFD3422820B04700D06965 /* RoundedImage.swift in Sources */,
 				48CFD33B2820A01E00D06965 /* LoginView.swift in Sources */,
+				48CFD3482820B5AB00D06965 /* WelcomeView.swift in Sources */,
 				48CFD3462820B50B00D06965 /* HomeViewController.swift in Sources */,
 				48D4CEFA2820958300A86078 /* SceneDelegate.swift in Sources */,
 			);
