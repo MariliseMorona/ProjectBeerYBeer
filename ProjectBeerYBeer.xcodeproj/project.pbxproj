@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48234F75282B35EE005FC820 /* loginBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 48234F74282B35EE005FC820 /* loginBeer.json */; };
+		48234F77282B3606005FC820 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48234F76282B3606005FC820 /* Colors.swift */; };
+		4836CEF5282B264900B42E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CEF4282B264900B42E35 /* AppDelegate.swift */; };
+		4836CEF7282B264900B42E35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CEF6282B264900B42E35 /* SceneDelegate.swift */; };
+		4836CEFE282B264A00B42E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4836CEFD282B264A00B42E35 /* Assets.xcassets */; };
+		4836CF01282B264A00B42E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4836CEFF282B264A00B42E35 /* LaunchScreen.storyboard */; };
+		4836CF15282B287100B42E35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF14282B287100B42E35 /* LoginViewController.swift */; };
+		4836CF1A282B295C00B42E35 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF19282B295C00B42E35 /* LoginView.swift */; };
+		4836CF1E282B29D600B42E35 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF1D282B29D600B42E35 /* ResultsViewController.swift */; };
+		4836CF22282B2A1000B42E35 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF21282B2A1000B42E35 /* ProfileCollectionViewCell.swift */; };
+		4836CF24282B2A1D00B42E35 /* BeersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF23282B2A1D00B42E35 /* BeersCollectionViewCell.swift */; };
+		4836CF27282B2A7D00B42E35 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF26282B2A7D00B42E35 /* DetailProfileViewController.swift */; };
+		4836CF29282B2AA200B42E35 /* InfoProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF28282B2AA200B42E35 /* InfoProfileView.swift */; };
+		4836CF2B282B2AC700B42E35 /* RankingBeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF2A282B2AC700B42E35 /* RankingBeerCollectionViewCell.swift */; };
+		4836CF2D282B2AE900B42E35 /* RecomendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF2C282B2AE900B42E35 /* RecomendationCollectionViewCell.swift */; };
+		4836CF30282B2B2600B42E35 /* DetailBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF2F282B2B2600B42E35 /* DetailBeerViewController.swift */; };
+		4836CF32282B2B4F00B42E35 /* HeaderBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF31282B2B4F00B42E35 /* HeaderBeerView.swift */; };
+		4836CF34282B2B8300B42E35 /* StarsGridTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF33282B2B8300B42E35 /* StarsGridTableViewCell.swift */; };
+		48D5A2E0282C7EE100482743 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 48D5A2DF282C7EE100482743 /* Lottie */; };
+		48D5A2E2282C7F2D00482743 /* launchBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 48D5A2E1282C7F2D00482743 /* launchBeer.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		48234F74282B35EE005FC820 /* loginBeer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginBeer.json; sourceTree = "<group>"; };
+		48234F76282B3606005FC820 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		4836CEF1282B264900B42E35 /* ProjectBeerYBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectBeerYBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4836CEF4282B264900B42E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4836CEF6282B264900B42E35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4836CEFD282B264A00B42E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4836CF00282B264A00B42E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4836CF02282B264A00B42E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4836CF14282B287100B42E35 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4836CF19282B295C00B42E35 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4836CF1D282B29D600B42E35 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		4836CF21282B2A1000B42E35 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		4836CF23282B2A1D00B42E35 /* BeersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersCollectionViewCell.swift; sourceTree = "<group>"; };
+		4836CF26282B2A7D00B42E35 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
+		4836CF28282B2AA200B42E35 /* InfoProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoProfileView.swift; sourceTree = "<group>"; };
+		4836CF2A282B2AC700B42E35 /* RankingBeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBeerCollectionViewCell.swift; sourceTree = "<group>"; };
+		4836CF2C282B2AE900B42E35 /* RecomendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendationCollectionViewCell.swift; sourceTree = "<group>"; };
+		4836CF2F282B2B2600B42E35 /* DetailBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBeerViewController.swift; sourceTree = "<group>"; };
+		4836CF31282B2B4F00B42E35 /* HeaderBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBeerView.swift; sourceTree = "<group>"; };
+		4836CF33282B2B8300B42E35 /* StarsGridTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsGridTableViewCell.swift; sourceTree = "<group>"; };
+		48D5A2E1282C7F2D00482743 /* launchBeer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launchBeer.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4836CEEE282B264900B42E35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D5A2E0282C7EE100482743 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48234F73282B35D8005FC820 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				48234F74282B35EE005FC820 /* loginBeer.json */,
+				48D5A2E1282C7F2D00482743 /* launchBeer.json */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		4836CEE8282B264900B42E35 = {
+			isa = PBXGroup;
+			children = (
+				4836CEF3282B264900B42E35 /* ProjectBeerYBeer */,
+				4836CEF2282B264900B42E35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4836CEF2282B264900B42E35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4836CEF1282B264900B42E35 /* ProjectBeerYBeer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4836CEF3282B264900B42E35 /* ProjectBeerYBeer */ = {
+			isa = PBXGroup;
+			children = (
+				48234F73282B35D8005FC820 /* Files */,
+				4836CF35282B2BB700B42E35 /* Commons */,
+				4836CF18282B28E600B42E35 /* View */,
+				4836CF17282B28DA00B42E35 /* Model */,
+				4836CF16282B28BB00B42E35 /* Controller */,
+				4836CEF4282B264900B42E35 /* AppDelegate.swift */,
+				4836CEF6282B264900B42E35 /* SceneDelegate.swift */,
+				4836CEFD282B264A00B42E35 /* Assets.xcassets */,
+				4836CEFF282B264A00B42E35 /* LaunchScreen.storyboard */,
+				4836CF02282B264A00B42E35 /* Info.plist */,
+			);
+			path = ProjectBeerYBeer;
+			sourceTree = "<group>";
+		};
+		4836CF16282B28BB00B42E35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4836CF17282B28DA00B42E35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4836CF18282B28E600B42E35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4836CF2E282B2AFF00B42E35 /* DetailBeer */,
+				4836CF25282B2A5D00B42E35 /* DetailProfile */,
+				4836CF1C282B29AA00B42E35 /* Login */,
+				4836CF1B282B29A100B42E35 /* Results */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4836CF1B282B29A100B42E35 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				4836CF1D282B29D600B42E35 /* ResultsViewController.swift */,
+				4836CF21282B2A1000B42E35 /* ProfileCollectionViewCell.swift */,
+				4836CF23282B2A1D00B42E35 /* BeersCollectionViewCell.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		4836CF1C282B29AA00B42E35 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4836CF14282B287100B42E35 /* LoginViewController.swift */,
+				4836CF19282B295C00B42E35 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4836CF25282B2A5D00B42E35 /* DetailProfile */ = {
+			isa = PBXGroup;
+			children = (
+				4836CF26282B2A7D00B42E35 /* DetailProfileViewController.swift */,
+				4836CF28282B2AA200B42E35 /* InfoProfileView.swift */,
+				4836CF2A282B2AC700B42E35 /* RankingBeerCollectionViewCell.swift */,
+				4836CF2C282B2AE900B42E35 /* RecomendationCollectionViewCell.swift */,
+			);
+			path = DetailProfile;
+			sourceTree = "<group>";
+		};
+		4836CF2E282B2AFF00B42E35 /* DetailBeer */ = {
+			isa = PBXGroup;
+			children = (
+				4836CF2F282B2B2600B42E35 /* DetailBeerViewController.swift */,
+				4836CF31282B2B4F00B42E35 /* HeaderBeerView.swift */,
+				4836CF33282B2B8300B42E35 /* StarsGridTableViewCell.swift */,
+			);
+			path = DetailBeer;
+			sourceTree = "<group>";
+		};
+		4836CF35282B2BB700B42E35 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				48234F76282B3606005FC820 /* Colors.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4836CEF0282B264900B42E35 /* ProjectBeerYBeer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4836CF05282B264A00B42E35 /* Build configuration list for PBXNativeTarget "ProjectBeerYBeer" */;
+			buildPhases = (
+				4836CEED282B264900B42E35 /* Sources */,
+				4836CEEE282B264900B42E35 /* Frameworks */,
+				4836CEEF282B264900B42E35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProjectBeerYBeer;
+			packageProductDependencies = (
+				48D5A2DF282C7EE100482743 /* Lottie */,
+			);
+			productName = ProjectBeerYBeer;
+			productReference = 4836CEF1282B264900B42E35 /* ProjectBeerYBeer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4836CEE9282B264900B42E35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					4836CEF0282B264900B42E35 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 4836CEEC282B264900B42E35 /* Build configuration list for PBXProject "ProjectBeerYBeer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4836CEE8282B264900B42E35;
+			packageReferences = (
+				48D5A2DE282C7EE100482743 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			productRefGroup = 4836CEF2282B264900B42E35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4836CEF0282B264900B42E35 /* ProjectBeerYBeer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4836CEEF282B264900B42E35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D5A2E2282C7F2D00482743 /* launchBeer.json in Resources */,
+				4836CF01282B264A00B42E35 /* LaunchScreen.storyboard in Resources */,
+				4836CEFE282B264A00B42E35 /* Assets.xcassets in Resources */,
+				48234F75282B35EE005FC820 /* loginBeer.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4836CEED282B264900B42E35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4836CF29282B2AA200B42E35 /* InfoProfileView.swift in Sources */,
+				48234F77282B3606005FC820 /* Colors.swift in Sources */,
+				4836CF24282B2A1D00B42E35 /* BeersCollectionViewCell.swift in Sources */,
+				4836CF15282B287100B42E35 /* LoginViewController.swift in Sources */,
+				4836CF34282B2B8300B42E35 /* StarsGridTableViewCell.swift in Sources */,
+				4836CEF5282B264900B42E35 /* AppDelegate.swift in Sources */,
+				4836CF1A282B295C00B42E35 /* LoginView.swift in Sources */,
+				4836CF22282B2A1000B42E35 /* ProfileCollectionViewCell.swift in Sources */,
+				4836CF27282B2A7D00B42E35 /* DetailProfileViewController.swift in Sources */,
+				4836CF1E282B29D600B42E35 /* ResultsViewController.swift in Sources */,
+				4836CF32282B2B4F00B42E35 /* HeaderBeerView.swift in Sources */,
+				4836CEF7282B264900B42E35 /* SceneDelegate.swift in Sources */,
+				4836CF30282B2B2600B42E35 /* DetailBeerViewController.swift in Sources */,
+				4836CF2B282B2AC700B42E35 /* RankingBeerCollectionViewCell.swift in Sources */,
+				4836CF2D282B2AE900B42E35 /* RecomendationCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4836CEFF282B264A00B42E35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4836CF00282B264A00B42E35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4836CF03282B264A00B42E35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4836CF04282B264A00B42E35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4836CF06282B264A00B42E35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProjectBeerYBeer/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.morona.ProjectBeerYBeer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4836CF07282B264A00B42E35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProjectBeerYBeer/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.morona.ProjectBeerYBeer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4836CEEC282B264900B42E35 /* Build configuration list for PBXProject "ProjectBeerYBeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4836CF03282B264A00B42E35 /* Debug */,
+				4836CF04282B264A00B42E35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4836CF05282B264A00B42E35 /* Build configuration list for PBXNativeTarget "ProjectBeerYBeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4836CF06282B264A00B42E35 /* Debug */,
+				4836CF07282B264A00B42E35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48D5A2DE282C7EE100482743 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48D5A2DF282C7EE100482743 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48D5A2DE282C7EE100482743 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4836CEE9282B264900B42E35 /* Project object */;
+}

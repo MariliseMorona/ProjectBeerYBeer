@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  ProjectBeerYBeer
 //
-//  Created by Marilise Morona on 02/05/22.
+//  Created by Marilise Morona on 10/05/22.
 //
 
 import UIKit
@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowsScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowsScene)
-        let vc: LoginViewController = LoginViewController()
+        let vc: DetailBeerViewController = DetailBeerViewController()
         let navVc = UINavigationController(rootViewController: vc)
         window.rootViewController = navVc
         window.makeKeyAndVisible()

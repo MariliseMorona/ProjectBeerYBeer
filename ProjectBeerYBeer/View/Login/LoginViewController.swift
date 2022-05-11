@@ -1,15 +1,15 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  ProjectBeerYBeer
 //
-//  Created by Marilise Morona on 02/05/22.
+//  Created by Marilise Morona on 10/05/22.
 //
 
 import UIKit
 import Lottie
 
-class LoginViewController: UIViewController{
-    
+class LoginViewController: UIViewController {
+
     lazy var viewMask : UIView = {
         let viewAnimationMask = UIView()
         viewAnimationMask.translatesAutoresizingMaskIntoConstraints = false
@@ -73,7 +73,6 @@ class LoginViewController: UIViewController{
     override func viewDidLoad(){
         super.viewDidLoad()
         view.backgroundColor = .backgroundColorYellow
-//        viewMask.roundedImage()
         setUp()
     }
     
@@ -136,7 +135,8 @@ class LoginViewController: UIViewController{
         }
         if userName == "Kevin" && password == "oi"{
             signInButton.configuration?.showsActivityIndicator = true
-            self.present(HomeViewController(), animated: true, completion: nil)
+            self.show(ResultsViewController(), sender: nil)
+//            self.present(ResultsViewController(), animated: true, completion: nili
         } else {
             configureView(withMessage: "Incorrect username/ password.")
         }
