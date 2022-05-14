@@ -40,15 +40,16 @@ class HeaderBeerView: UIView {
     }
     func constrains() {
         NSLayoutConstraint.activate([
-            labelBeer.topAnchor.constraint(equalTo: topAnchor, constant: 50),
+            labelBeer.centerYAnchor.constraint(equalTo: centerYAnchor),
             labelBeer.heightAnchor.constraint(equalToConstant: 30),
             labelBeer.leadingAnchor.constraint(equalTo: leadingAnchor),
             labelBeer.widthAnchor.constraint(equalToConstant: 200),
             
             imageBeer.centerYAnchor.constraint(equalTo: labelBeer.centerYAnchor),
-            imageBeer.widthAnchor.constraint(equalToConstant: 200),
-            imageBeer.heightAnchor.constraint(equalToConstant: 250),
-            imageBeer.leadingAnchor.constraint(equalTo: labelBeer.trailingAnchor, constant: 20)
+            imageBeer.topAnchor.constraint(equalTo: topAnchor),
+            imageBeer.leadingAnchor.constraint(equalTo: labelBeer.trailingAnchor, constant: 20),
+            imageBeer.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageBeer.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }

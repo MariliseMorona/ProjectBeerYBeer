@@ -9,10 +9,10 @@ import UIKit
 
 class DetailBeerViewController: UIViewController {
 
+    let scrollView = UIScrollView()
+    let contentView = UIView()
     let cellStars = StarsGridTableViewCell()
-    
     let infoProfileView = HeaderBeerView()
-    
     lazy var detailsBeerTableView : UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +22,18 @@ class DetailBeerViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
+        tableView.isScrollEnabled = false
         return tableView
+    }()
+    
+    lazy var favoriteButton : UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .backgroundColorWhite
+        button.setTitle("Já provou essa?", for: .normal)
+        button.setTitleColor(.backgroundColorBlack, for: .normal)
+        button.layer.cornerRadius = 5
+        return button
     }()
     
     override func viewDidLoad() {
@@ -32,20 +43,44 @@ class DetailBeerViewController: UIViewController {
     private func setUp() {
         view.backgroundColor = .backgroundColorYellow
         view.addSubview(infoProfileView)
-        view.addSubview(detailsBeerTableView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        constraintsScrollView()
+        contentView.addSubview(detailsBeerTableView)
+        contentView.addSubview(favoriteButton)
         constraints()
     }
-    private func constraints() {
+    private func constraintsScrollView() {
         infoProfileView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            infoProfileView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            infoProfileView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             infoProfileView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             infoProfileView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            infoProfileView.heightAnchor.constraint(equalToConstant: 200),
-            detailsBeerTableView.topAnchor.constraint(equalTo: infoProfileView.bottomAnchor),
-            detailsBeerTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            detailsBeerTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            detailsBeerTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
+            infoProfileView.heightAnchor.constraint(equalToConstant: 150),
+            scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            scrollView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            scrollView.topAnchor.constraint(equalTo: infoProfileView.bottomAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+        ])
+    }
+    private func constraints() {
+        NSLayoutConstraint.activate([
+            detailsBeerTableView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            detailsBeerTableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
+            detailsBeerTableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
+            detailsBeerTableView.heightAnchor.constraint(equalToConstant: 950),
+            
+            favoriteButton.topAnchor.constraint(equalTo: detailsBeerTableView.bottomAnchor, constant: 10),
+            favoriteButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
+            favoriteButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
+            favoriteButton.heightAnchor.constraint(equalToConstant: 45),
+            favoriteButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
         ])
     }
 }
@@ -101,6 +136,7 @@ extension DetailBeerViewController: UITableViewDelegate, UITableViewDataSource {
             cellDetailsBeer.detailTextLabel?.numberOfLines = 0
         case 13:
             cellDetailsBeer = cellStars
+//            cellDetailsBeer.textLabel?.text = "oi"
         default:
             return UITableViewCell()
         }

@@ -10,7 +10,7 @@ import UIKit
 class StarsGridTableViewCell: UITableViewCell {
 
     lazy var stackView : UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, starsButton])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, fiveStarControl])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.alignment = .fill
@@ -23,12 +23,7 @@ class StarsGridTableViewCell: UITableViewCell {
         label.text = "Nota dos amigos:"
         return label
     }()
-    lazy var starsButton : UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .blue
-        return button
-    }()
+    let fiveStarControl = StarRatingStackView(frame: CGRect(x: (Int(UIScreen.main.bounds.width) - Int((5*Int(kStarSize))+(4*kSpacing)))/2, y: 100, width: Int((5*Int(kStarSize)) + (4*kSpacing)), height: Int(kStarSize)))
     override func layoutSubviews() {
         super.layoutSubviews()
         setUp()
@@ -40,10 +35,10 @@ class StarsGridTableViewCell: UITableViewCell {
     }
     func constrains() {
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: topAnchor),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             
         ])
     }
