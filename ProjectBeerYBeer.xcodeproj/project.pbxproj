@@ -26,6 +26,12 @@
 		4836CF32282B2B4F00B42E35 /* HeaderBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF31282B2B4F00B42E35 /* HeaderBeerView.swift */; };
 		4836CF34282B2B8300B42E35 /* StarsGridTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF33282B2B8300B42E35 /* StarsGridTableViewCell.swift */; };
 		48972AE5283020880051FB6B /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AE4283020880051FB6B /* Components.swift */; };
+		48972AE828302C8D0051FB6B /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AE728302C8D0051FB6B /* RegisterUserViewController.swift */; };
+		48972AEA283030990051FB6B /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AE9283030990051FB6B /* RegisterUserView.swift */; };
+		48972AF0283039830051FB6B /* BrannbollSS_PERSONAL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48972AED283039830051FB6B /* BrannbollSS_PERSONAL.ttf */; };
+		48972AF1283039830051FB6B /* License - READ THIS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 48972AEE283039830051FB6B /* License - READ THIS.txt */; };
+		48972AF2283039830051FB6B /* BrannbollFS_PERSONAL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48972AEF283039830051FB6B /* BrannbollFS_PERSONAL.ttf */; };
+		48972AF428303A080051FB6B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AF328303A080051FB6B /* File.swift */; };
 		48D5A2E0282C7EE100482743 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 48D5A2DF282C7EE100482743 /* Lottie */; };
 		48D5A2E2282C7F2D00482743 /* launchBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 48D5A2E1282C7F2D00482743 /* launchBeer.json */; };
 		48D5A2E4282C824E00482743 /* StarRatingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5A2E3282C824E00482743 /* StarRatingStackView.swift */; };
@@ -53,6 +59,12 @@
 		4836CF31282B2B4F00B42E35 /* HeaderBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBeerView.swift; sourceTree = "<group>"; };
 		4836CF33282B2B8300B42E35 /* StarsGridTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsGridTableViewCell.swift; sourceTree = "<group>"; };
 		48972AE4283020880051FB6B /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		48972AE728302C8D0051FB6B /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
+		48972AE9283030990051FB6B /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
+		48972AED283039830051FB6B /* BrannbollSS_PERSONAL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrannbollSS_PERSONAL.ttf; sourceTree = "<group>"; };
+		48972AEE283039830051FB6B /* License - READ THIS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "License - READ THIS.txt"; sourceTree = "<group>"; };
+		48972AEF283039830051FB6B /* BrannbollFS_PERSONAL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrannbollFS_PERSONAL.ttf; sourceTree = "<group>"; };
+		48972AF328303A080051FB6B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		48D5A2E1282C7F2D00482743 /* launchBeer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launchBeer.json; sourceTree = "<group>"; };
 		48D5A2E3282C824E00482743 /* StarRatingStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,8 +84,8 @@
 		48234F73282B35D8005FC820 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				48234F74282B35EE005FC820 /* loginBeer.json */,
-				48D5A2E1282C7F2D00482743 /* launchBeer.json */,
+				48972AEC283039610051FB6B /* Animations */,
+				48972AEB283039560051FB6B /* Fonts */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -128,6 +140,8 @@
 		4836CF18282B28E600B42E35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				48972AF528303C5C0051FB6B /* RegisterBeer */,
+				48972AE628302C740051FB6B /* RegisterUser */,
 				4836CF2E282B2AFF00B42E35 /* DetailBeer */,
 				4836CF25282B2A5D00B42E35 /* DetailProfile */,
 				4836CF1C282B29AA00B42E35 /* Login */,
@@ -182,8 +196,44 @@
 			children = (
 				48234F76282B3606005FC820 /* Colors.swift */,
 				48972AE4283020880051FB6B /* Components.swift */,
+				48972AF328303A080051FB6B /* File.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		48972AE628302C740051FB6B /* RegisterUser */ = {
+			isa = PBXGroup;
+			children = (
+				48972AE728302C8D0051FB6B /* RegisterUserViewController.swift */,
+				48972AE9283030990051FB6B /* RegisterUserView.swift */,
+			);
+			path = RegisterUser;
+			sourceTree = "<group>";
+		};
+		48972AEB283039560051FB6B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				48972AEF283039830051FB6B /* BrannbollFS_PERSONAL.ttf */,
+				48972AED283039830051FB6B /* BrannbollSS_PERSONAL.ttf */,
+				48972AEE283039830051FB6B /* License - READ THIS.txt */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		48972AEC283039610051FB6B /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				48D5A2E1282C7F2D00482743 /* launchBeer.json */,
+				48234F74282B35EE005FC820 /* loginBeer.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		48972AF528303C5C0051FB6B /* RegisterBeer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RegisterBeer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +301,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D5A2E2282C7F2D00482743 /* launchBeer.json in Resources */,
+				48972AF1283039830051FB6B /* License - READ THIS.txt in Resources */,
+				48972AF2283039830051FB6B /* BrannbollFS_PERSONAL.ttf in Resources */,
 				4836CF01282B264A00B42E35 /* LaunchScreen.storyboard in Resources */,
+				48972AF0283039830051FB6B /* BrannbollSS_PERSONAL.ttf in Resources */,
 				4836CEFE282B264A00B42E35 /* Assets.xcassets in Resources */,
 				48234F75282B35EE005FC820 /* loginBeer.json in Resources */,
 			);
@@ -269,10 +322,13 @@
 				4836CF24282B2A1D00B42E35 /* BeersCollectionViewCell.swift in Sources */,
 				4836CF15282B287100B42E35 /* LoginViewController.swift in Sources */,
 				4836CF34282B2B8300B42E35 /* StarsGridTableViewCell.swift in Sources */,
+				48972AF428303A080051FB6B /* File.swift in Sources */,
 				4836CEF5282B264900B42E35 /* AppDelegate.swift in Sources */,
 				4836CF1A282B295C00B42E35 /* LoginView.swift in Sources */,
 				4836CF22282B2A1000B42E35 /* ProfileCollectionViewCell.swift in Sources */,
+				48972AEA283030990051FB6B /* RegisterUserView.swift in Sources */,
 				4836CF27282B2A7D00B42E35 /* DetailProfileViewController.swift in Sources */,
+				48972AE828302C8D0051FB6B /* RegisterUserViewController.swift in Sources */,
 				4836CF1E282B29D600B42E35 /* ResultsViewController.swift in Sources */,
 				4836CF32282B2B4F00B42E35 /* HeaderBeerView.swift in Sources */,
 				4836CEF7282B264900B42E35 /* SceneDelegate.swift in Sources */,

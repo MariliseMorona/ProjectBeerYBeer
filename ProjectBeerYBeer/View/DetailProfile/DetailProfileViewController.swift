@@ -154,8 +154,8 @@ extension DetailProfileViewController {
 //MARK: CollectionsView Delegate
 extension DetailProfileViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let index  = indexPath.row
-        print("celula selecionada \(index)")
+        let indexCell  = indexPath.row
+        print("celula selecionada \(indexCell)")
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize.init(width: view.frame.size.width/5+10, height: view.frame.size.width/5+10)

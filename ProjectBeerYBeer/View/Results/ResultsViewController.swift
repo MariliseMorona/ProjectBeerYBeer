@@ -117,15 +117,6 @@ extension ResultsViewController {
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15)
         section.orthogonalScrollingBehavior = .continuous
-//        section.visibleItemsInvalidationHandler = { (items, offset, environment) in
-//            items.forEach { item in
-//                let distanceFromCenter = abs((item.frame.midX - offset.x) - environment.container.contentSize.width / 2.0)
-//                let minScale: CGFloat = 0.7
-//                let maxScale: CGFloat = 1.1
-//                let scale = max(maxScale - (distanceFromCenter / environment.container.contentSize.width), minScale)
-//                item.transform = CGAffineTransform(scaleX: scale, y: scale)
-//            }
-//        }
         let layout = UICollectionViewCompositionalLayout(section: section)
         layout.register(BeersCollectionViewCell.self, forDecorationViewOfKind: ResultsViewController.sectionBackgroundDecorationElementKind)
         return layout
@@ -140,15 +131,6 @@ extension ResultsViewController {
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 2.5, bottom: 0, trailing: 2.5)
         section.orthogonalScrollingBehavior = .continuous
-//        section.visibleItemsInvalidationHandler = { (items, offset, environment) in
-//            items.forEach { item in
-//                let distanceFromCenter = abs((item.frame.midX - offset.x) - environment.container.contentSize.width / 2.0)
-//                let minScale: CGFloat = 0.7
-//                let maxScale: CGFloat = 1.1
-//                let scale = max(maxScale - (distanceFromCenter / environment.container.contentSize.width), minScale)
-//                item.transform = CGAffineTransform(scaleX: scale, y: scale)
-//            }
-//        }
         let layout = UICollectionViewCompositionalLayout(section: section)
         layout.register(BeersCollectionViewCell.self, forDecorationViewOfKind: ResultsViewController.sectionBackgroundDecorationElementKindow)
         return layout
@@ -214,7 +196,18 @@ extension ResultsViewController {
 //MARK: CollectionsView Delegate
 extension ResultsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let index  = indexPath.row
-        print("celula selecionada \(index)")
+//        let index  = indexPath.row
+        var openVC = UIViewController()
+//        self.navigationController?.pushViewController(openVC, animated: true)
+//        print("celula selecionada \(index)")
+        
+        if collectionView == collectionViewProfiles {
+
+            openVC = DetailProfileViewController()
+            
+        }else {
+            openVC = DetailBeerViewController()
+        }
+        self.navigationController?.pushViewController(openVC, animated: true)
     }
 }

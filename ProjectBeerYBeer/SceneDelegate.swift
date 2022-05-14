@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowsScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowsScene)
-        let vc: DetailBeerViewController = DetailBeerViewController()
+        let vc: LoginViewController = LoginViewController()
         let navVc = UINavigationController(rootViewController: vc)
         window.rootViewController = navVc
         window.makeKeyAndVisible()

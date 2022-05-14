@@ -1,16 +1,16 @@
 //
-//  LoginView.swift
+//  RegisterView.swift
 //  ProjectBeerYBeer
 //
-//  Created by Marilise Morona on 10/05/22.
+//  Created by Marilise Morona on 14/05/22.
 //
 
 import UIKit
 
-class LoginView: UIView {
+class RegisterUserView: UIView {
 
     lazy var stackView : UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [userNameTextField, dividerView, passwordTextField])
+        let stackView = UIStackView(arrangedSubviews: [nameTextField, emailTextField, passwordTextField])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 8
@@ -18,14 +18,11 @@ class LoginView: UIView {
         return stackView
     }()
     
-    let userNameTextField = UITextField.textField(placeholder: "Login", backgroundColor: .backgroundColorWhite, textColor: .backgroundColorGrayLight)
-    lazy var dividerView : UIView = {
-        let dividerView = UIView()
-        dividerView.translatesAutoresizingMaskIntoConstraints = false
-        dividerView.backgroundColor = .backgroundColorGradyMed
-        return dividerView
-    }()
-    let passwordTextField = UITextField.textField(placeholder: "Password", backgroundColor: .backgroundColorWhite, textColor: .backgroundColorGrayLight)
+    let nameTextField = UITextField.textField(placeholder: "Insira seu nome", backgroundColor: .backgroundColorWhite, textColor: .backgroundColorGrayLight)
+
+    let emailTextField = UITextField.textField(placeholder: "Insira seu e-mail", backgroundColor: .backgroundColorWhite, textColor: .backgroundColorGrayLight)
+
+    let passwordTextField = UITextField.textField(placeholder: "Crie uma senha forte", backgroundColor: .backgroundColorWhite, textColor: .backgroundColorGrayLight)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,15 +47,16 @@ class LoginView: UIView {
             trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 0),
             bottomAnchor.constraint(equalToSystemSpacingBelow: stackView.bottomAnchor, multiplier: 1)
         ])
-        dividerView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        userNameTextField.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        nameTextField.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        emailTextField.heightAnchor.constraint(equalToConstant: 35).isActive = true
         passwordTextField.heightAnchor.constraint(equalToConstant: 35).isActive = true
     }
 }
 
-extension LoginView: UITextFieldDelegate{
+extension RegisterUserView: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        userNameTextField.endEditing(true)
+        nameTextField.endEditing(true)
+        emailTextField.endEditing(true)
         passwordTextField.endEditing(true)
         return true
     }

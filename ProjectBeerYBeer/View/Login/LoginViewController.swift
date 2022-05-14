@@ -42,27 +42,9 @@ class LoginViewController: UIViewController {
         errorMessage.isHidden = true
         return errorMessage
     }()
-    lazy var signInButton : UIButton = {
-        let signInButton = UIButton()
-        signInButton.translatesAutoresizingMaskIntoConstraints = false
-        signInButton.setTitle("Sign In", for: [])
-        signInButton.configuration = .filled()
-        signInButton.configuration?.imagePadding = 8
-        signInButton.addTarget(self, action: #selector(signInTapped(sender:)), for: .primaryActionTriggered)
-        signInButton.tintColor = .backgroundColorBlack
-        return signInButton
-    }()
-    let newUserMessageLabel : UILabel = {
-        let newUser = UILabel()
-        newUser.translatesAutoresizingMaskIntoConstraints = false
-        newUser.textAlignment = .center
-        newUser.text = "New user ?"
-        newUser.textColor = .backgroundColorBlack
-        newUser.numberOfLines = 0
-        newUser.isHidden = false
-        newUser.font = UIFont(name: "Roboto", size: 14)
-        return newUser
-    }()
+    let signInButton = UIButton.button(setTitle: "Sign In", backgroundColor: .backgroundColorBlack)
+    let newUserButton = UIButton.button(setTitle: "New user?", backgroundColor: .clear)
+
     var userName: String?{
         return loginView.userNameTextField.text
     }
@@ -82,7 +64,9 @@ class LoginViewController: UIViewController {
         view.addSubview(loginView)
         view.addSubview(errorMessageLabel)
         view.addSubview(signInButton)
-        view.addSubview(newUserMessageLabel)
+        signInButton.addTarget(self, action: #selector(signInTapped(sender:)), for: .primaryActionTriggered)
+        newUserButton.addTarget(self, action: #selector(registerInTapped(sender:)), for: .primaryActionTriggered)
+        view.addSubview(newUserButton)
         constraintLayout()
         loginAnimation.play()
         
@@ -101,7 +85,7 @@ class LoginViewController: UIViewController {
             loginAnimation.bottomAnchor.constraint(equalTo: viewMask.bottomAnchor),
             loginAnimation.leadingAnchor.constraint(equalTo: viewMask.leadingAnchor),
 
-            loginView.topAnchor.constraint(equalTo: viewMask.bottomAnchor, constant: 10),
+            loginView.topAnchor.constraint(equalTo: viewMask.bottomAnchor, constant: 300),
             loginView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             loginView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
@@ -112,16 +96,22 @@ class LoginViewController: UIViewController {
             signInButton.topAnchor.constraint(equalTo: errorMessageLabel.bottomAnchor, constant: 10),
             signInButton.leadingAnchor.constraint(equalTo: errorMessageLabel.leadingAnchor),
             signInButton.trailingAnchor.constraint(equalTo: errorMessageLabel.trailingAnchor),
+            signInButton.heightAnchor.constraint(equalToConstant: 40),
             
-            newUserMessageLabel.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
-            newUserMessageLabel.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
-            newUserMessageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor),
+            newUserButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
+            newUserButton.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
+            newUserButton.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor),
         ])
     }
     
     @objc func signInTapped(sender: UIButton){
         errorMessageLabel.isHidden = true
         login()
+    }
+    @objc func registerInTapped(sender: UIButton){
+        errorMessageLabel.isHidden = true
+        let openRegister = RegisterUserViewController()
+        self.navigationController?.pushViewController(openRegister, animated: true)
     }
     
     private func login(){
