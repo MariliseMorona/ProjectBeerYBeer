@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailBeerViewController: UIViewController {
-
+    var beerSelected : Beer?
     let scrollView = UIScrollView()
     let contentView = UIView()
     let cellStars = StarsGridTableViewCell()
@@ -43,6 +44,7 @@ class DetailBeerViewController: UIViewController {
     private func setUp() {
         view.backgroundColor = .backgroundColorYellow
         view.addSubview(infoProfileView)
+        configurateImageBeer()
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         constraintsScrollView()
@@ -83,6 +85,25 @@ class DetailBeerViewController: UIViewController {
             favoriteButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
         ])
     }
+    
+    private func configurateImageBeer(){
+            let imageBeerDetails = beerSelected?.image_url
+            if imageBeerDetails != nil {
+                guard let imagePath = beerSelected?.image_url else { return }
+                let url = "\(imagePath)"
+                if let beerImage = URL(string: url){
+                    infoProfileView.imageBeer.kf.setImage(with: beerImage)
+                }
+            } else {
+                infoProfileView.imageBeer.image = UIImage(named: "default")
+            }
+    }
+    
+    func favoritedBeer(){
+       let idBeerFavorited = beerSelected?.id
+        print(idBeerFavorited)
+    }
+
 }
 extension DetailBeerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,48 +116,47 @@ extension DetailBeerViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             cellDetailsBeer.textLabel?.text = "Descrição"
-            cellDetailsBeer.detailTextLabel?.text = "Our flagship beer that kick started the craft beer revolution. This is James and Mastin's original take on an American IPA, subverted with punchy New Zealand hops. Layered with new world hops to create an all-out riot of grapefruit, pineapple and lychee before a spiky, mouth-puckering bitter finish."
+            cellDetailsBeer.detailTextLabel?.text = beerSelected?.description
             cellDetailsBeer.detailTextLabel?.numberOfLines = 0
         case 1:
             cellDetailsBeer.textLabel?.text = "ABV"
-            cellDetailsBeer.detailTextLabel?.text = "6.0"
+            cellDetailsBeer.detailTextLabel?.text = String(beerSelected?.abv ?? 0.0)
         case 2:
             cellDetailsBeer.textLabel?.text = "IBU"
-            cellDetailsBeer.detailTextLabel?.text = "60.0"
+            cellDetailsBeer.detailTextLabel?.text = String(beerSelected?.ibu ?? 0)
         case 3:
             cellDetailsBeer.textLabel?.text = "EBC"
-            cellDetailsBeer.detailTextLabel?.text = "17.0"
+            cellDetailsBeer.detailTextLabel?.text = String(beerSelected?.ebc ?? 0)
         case 4:
             cellDetailsBeer.textLabel?.text = "SRM"
-            cellDetailsBeer.detailTextLabel?.text = "8.5"
+            cellDetailsBeer.detailTextLabel?.text = String(beerSelected?.srm ?? 0.0)
         case 5:
             cellDetailsBeer.textLabel?.text = "pH"
-            cellDetailsBeer.detailTextLabel?.text = "4.4"
+            cellDetailsBeer.detailTextLabel?.text = String(beerSelected?.ph ?? 0.0)
         case 6:
             cellDetailsBeer.textLabel?.text = "Attenuation"
-            cellDetailsBeer.detailTextLabel?.text = "82.12"
+            cellDetailsBeer.detailTextLabel?.text = String(beerSelected?.attenuation_level ?? 0.0)
         case 7:
             cellDetailsBeer.textLabel?.text = "Métodos de fabricação"
         case 8:
             cellDetailsBeer.textLabel?.text = "Mash"
-            cellDetailsBeer.detailTextLabel?.text = "65.0 graus Celsius por 75"
+//            cellDetailsBeer.detailTextLabel?.text = String(beerSelected?.method.mash_temp)
         case 9:
             cellDetailsBeer.textLabel?.text = "Fermentação"
-            cellDetailsBeer.detailTextLabel?.text = "19.0 graus Celsius"
+//            cellDetailsBeer.detailTextLabel?.text = String(beerSelected?.method.fermentation)
         case 10:
             cellDetailsBeer.textLabel?.text = "Twist"
-            cellDetailsBeer.detailTextLabel?.text = "nul"
+            cellDetailsBeer.detailTextLabel?.text = beerSelected?.method.twist
         case 11:
             cellDetailsBeer.textLabel?.text = "Ingredientes"
-            cellDetailsBeer.detailTextLabel?.text = "Malte Extra Pale 5.3 kilogramas hops Ahtanum 17.5 gramas adicionano no start confere amargor, Chinook 15.0 gramas adicionado ao start confere amargor, levedura Wyeats 1056 American Ale."
+//            cellDetailsBeer.detailTextLabel?.text = String(beerSelected?.ingredients)
             cellDetailsBeer.detailTextLabel?.numberOfLines = 0
         case 12:
             cellDetailsBeer.textLabel?.text = "Combina com"
-            cellDetailsBeer.detailTextLabel?.text = "Spicy carne asada with a pico de gallo sauce, Shredded chicken tacos with a mango chilli lime salsa, Cheesecake with a passion fruit swirl sauce."
+//            cellDetailsBeer.detailTextLabel?.text = String(beerSelected?.food_pairing)
             cellDetailsBeer.detailTextLabel?.numberOfLines = 0
         case 13:
             cellDetailsBeer = cellStars
-//            cellDetailsBeer.textLabel?.text = "oi"
         default:
             return UITableViewCell()
         }

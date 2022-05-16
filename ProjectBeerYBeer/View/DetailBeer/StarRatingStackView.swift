@@ -12,6 +12,8 @@ let kStarSize: CGFloat = 44.0
 
 class StarRatingStackView: UIStackView {
     
+    var detailBeerVC : DetailBeerViewController?
+    
     private var ratingButtons = [UIButton]()
     var rating: Int = 0 {
         didSet {
@@ -53,11 +55,6 @@ class StarRatingStackView: UIStackView {
             button.setImage(#imageLiteral(resourceName: "filledStar"), for: .selected)
             button.setImage(#imageLiteral(resourceName: "highlightedStar"), for: .highlighted)
             button.setImage(#imageLiteral(resourceName: "highlightedStar"), for: [.highlighted, .selected])
-            
-//            button.translatesAutoresizingMaskIntoConstraints = false
-//            button.heightAnchor.constraint(equalToConstant: kStarSize).isActive = true
-//            button.widthAnchor.constraint(equalToConstant: kStarSize).isActive = true
-            
             button.addTarget(self, action: #selector(ratingButtonTapped(button:)), for: .touchUpInside)
             addArrangedSubview(button)
             ratingButtons.append(button)
@@ -77,8 +74,8 @@ class StarRatingStackView: UIStackView {
             rating = 0
         } else {
             rating = selectedRating
+            detailBeerVC?.favoritedBeer()
         }
-    
     }
     
     func updateButtonSelectionStates() {

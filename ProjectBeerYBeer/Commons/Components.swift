@@ -17,6 +17,15 @@ extension UILabel{
         label.textColor = .backgroundColorBlack
         return label
     }
+    static func label() -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.textColor = .backgroundColorBrown
+        label.numberOfLines = 0
+        label.isHidden = true
+        return label
+    }
 }
 extension UITextField{
     static func textField(placeholder: String, backgroundColor: UIColor, textColor : UIColor) -> UITextField {

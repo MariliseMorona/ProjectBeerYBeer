@@ -10,8 +10,8 @@ import UIKit
 class ProfileCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "profile-cell-reuse-identifier"
     
-    lazy var labelCollectionViewCell : UILabel = {
-        let label = UILabel()
+    lazy var labelCollectionViewCell : UIImageView = {
+        let label = UIImageView()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.layer.borderColor = UIColor.backgroundColorBlack.cgColor
         label.layer.borderWidth = 2
@@ -41,3 +41,4 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         ])
     }
 }
+    

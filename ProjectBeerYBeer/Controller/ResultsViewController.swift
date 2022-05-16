@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ResultsViewController: UIViewController {
-
+    
+    var loadAPI = BeerAPI()
+    var beersAPI : [Beer] = []
+    var beer : Beer?
+    
     static let sectionBackgroundDecorationElementKind = "section-background-element-kind"
     static let sectionBackgroundDecorationElementKindow = "section-background-element-kindou"
     var currentSnapshotBeer: NSDiffableDataSourceSnapshot<Int, Int>! = nil
@@ -57,6 +62,7 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         setUp()
         setUpCollectionView()
+        getDataAPI()
     }
     private func setUp() {
         view.backgroundColor = .backgroundColorWhite
@@ -92,6 +98,23 @@ class ResultsViewController: UIViewController {
     private func setUpCollectionView(){
         configureBeerDataSource()
         configureProfileDataSource()
+    }
+    func getDataAPI(){
+        loadAPI.getApi(url: loadAPI.url("")) { result in
+            switch result {
+            case .success(let beers):
+                let response = beers
+                self.beersAPI = response
+                DispatchQueue.main.async {
+                    self.reloadCollectionBeers()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    private func reloadCollectionBeers(){
+        collectionViewBeer.reloadData()
     }
 }
 //MARK: TextField Delegate
@@ -132,13 +155,13 @@ extension ResultsViewController {
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 2.5, bottom: 0, trailing: 2.5)
         section.orthogonalScrollingBehavior = .continuous
         let layout = UICollectionViewCompositionalLayout(section: section)
-        layout.register(BeersCollectionViewCell.self, forDecorationViewOfKind: ResultsViewController.sectionBackgroundDecorationElementKindow)
+        layout.register(ProfileCollectionViewCell.self, forDecorationViewOfKind: ResultsViewController.sectionBackgroundDecorationElementKindow)
         return layout
     }
 }
 extension ResultsViewController {
     func configureBeerDataSource() {
-        dataSourceProfile = UICollectionViewDiffableDataSource<Int, Int>(collectionView: collectionViewBeer) { [weak self]
+        dataSourceBeer = UICollectionViewDiffableDataSource<Int, Int>(collectionView: collectionViewBeer) { [weak self]
             (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
             guard let self = self, let currentSnapshot = self.currentSnapshotBeer else { return nil }
             let sectionIdentifier = currentSnapshot.sectionIdentifiers[indexPath.section]
@@ -146,6 +169,12 @@ extension ResultsViewController {
             let isLastCell = indexPath.item + 1 == numberOfItemsInSection
             if let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: BeersCollectionViewCell.reuseIdentifier, for: indexPath) as? BeersCollectionViewCell {
+                //                ForEach(beersAPI){ beer in
+                //                    cell.beerImage = beer
+                //                }
+                for beer in self.beersAPI{
+                    cell.beerImage = beer
+                }
                 return cell
             } else {
                 fatalError("Cannot create new cell")
@@ -159,55 +188,64 @@ extension ResultsViewController {
             currentSnapshotBeer.appendSections([$0])
             currentSnapshotBeer.appendItems(Array(itemOffset..<itemOffset + itemsPerSection))
             itemOffset += itemsPerSection
+            
         }
-        dataSourceProfile.apply(currentSnapshotBeer, animatingDifferences: false)
+        dataSourceBeer.apply(currentSnapshotBeer, animatingDifferences: false)
     }
     
-        func configureProfileDataSource() {
-            dataSourceBeer = UICollectionViewDiffableDataSource
-            <Int, Int>(collectionView: collectionViewProfiles) { [weak self]
-                (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
-                guard let self = self, let currentSnapshot = self.currentSnapshotProfile else { return nil }
-                let sectionIdentifier = currentSnapshot.sectionIdentifiers[indexPath.section]
-                let numberOfItemsInSection = currentSnapshot.numberOfItems(inSection: sectionIdentifier)
-                let isLastCell = indexPath.item + 1 == numberOfItemsInSection
-                if let cell = collectionView.dequeueReusableCell(
-                    withReuseIdentifier: ProfileCollectionViewCell.reuseIdentifier,
-                    for: indexPath) as? ProfileCollectionViewCell {
-                    
-                    return cell
-                } else {
-                    fatalError("Cannot create new cell")
-                }
+    func configureProfileDataSource() {
+        dataSourceProfile = UICollectionViewDiffableDataSource
+        <Int, Int>(collectionView: collectionViewProfiles) { [weak self]
+            (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
+            guard let self = self, let currentSnapshot = self.currentSnapshotProfile else { return nil }
+            let sectionIdentifier = currentSnapshot.sectionIdentifiers[indexPath.section]
+            let numberOfItemsInSection = currentSnapshot.numberOfItems(inSection: sectionIdentifier)
+            let isLastCell = indexPath.item + 1 == numberOfItemsInSection
+            if let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: ProfileCollectionViewCell.reuseIdentifier,
+                for: indexPath) as? ProfileCollectionViewCell {
+                
+                return cell
+            } else {
+                fatalError("Cannot create new cell")
             }
-            let itemsPerSection = 5
-            let sections = Array(0..<1)
-            currentSnapshotProfile = NSDiffableDataSourceSnapshot<Int, Int>()
-            var itemOffset = 0
-            sections.forEach {
-                currentSnapshotProfile.appendSections([$0])
-                currentSnapshotProfile.appendItems(Array(itemOffset..<itemOffset + itemsPerSection))
-                itemOffset += itemsPerSection
-            }
-            dataSourceBeer.apply(currentSnapshotProfile, animatingDifferences: false)
         }
+        let itemsPerSection = 5
+        let sections = Array(0..<1)
+        currentSnapshotProfile = NSDiffableDataSourceSnapshot<Int, Int>()
+        var itemOffset = 0
+        sections.forEach {
+            currentSnapshotProfile.appendSections([$0])
+            currentSnapshotProfile.appendItems(Array(itemOffset..<itemOffset + itemsPerSection))
+            itemOffset += itemsPerSection
+        }
+        dataSourceProfile.apply(currentSnapshotProfile, animatingDifferences: false)
+    }
 }
 
 //MARK: CollectionsView Delegate
 extension ResultsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let index  = indexPath.row
-        var openVC = UIViewController()
-//        self.navigationController?.pushViewController(openVC, animated: true)
-//        print("celula selecionada \(index)")
-        
         if collectionView == collectionViewProfiles {
-
-            openVC = DetailProfileViewController()
+            var openProfileVC = DetailProfileViewController()
             
+            self.navigationController?.pushViewController(openProfileVC, animated: true)
         }else {
-            openVC = DetailBeerViewController()
+            
+            //            var openBeerVC = DetailBeerViewController()
+            //            if let beerID = dataSourceBeer.itemIdentifier(for: indexPath) {
+            //                openBeerVC.beerSelected = beersAPI[beerID]
+            //                self.navigationController?.pushViewController(openBeerVC, animated: true)
+            //            }
+            var openBeerVC = DetailBeerViewController()
+            openBeerVC.beerSelected = beersAPI[indexPath.item]
+            //            openBeerVC.beerSelected = beer[indexPath.section].items[indexPath.row]
+            self.navigationController?.pushViewController(openBeerVC, animated: true)
         }
-        self.navigationController?.pushViewController(openVC, animated: true)
+    }
+}
+extension Collection where Indices.Iterator.Element == Index {
+    public subscript(safe index: Index) -> Iterator.Element? {
+        return (startIndex <= index && index < endIndex) ? self[index] : nil
     }
 }

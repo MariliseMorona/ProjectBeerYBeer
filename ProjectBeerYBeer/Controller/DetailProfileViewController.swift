@@ -8,7 +8,10 @@
 import UIKit
 
 class DetailProfileViewController: UIViewController {
-
+    var loadAPI = BeerAPI()
+    var beersAPI : [Beer] = []
+    var beer : Beer?
+    var beerSelected : Beer?
     let infoProfileView = InfoProfileView()
     
     static let sectionBackgroundDecorationElementK = "section-background-element-k"
@@ -90,6 +93,24 @@ class DetailProfileViewController: UIViewController {
             
         ])
     }
+    func getDataAPI(){
+        loadAPI.getApi(url: loadAPI.url("")) { result in
+            switch result {
+            case .success(let beers):
+                let response = beers
+                self.beersAPI = response
+                DispatchQueue.main.async {
+                    self.reloadCollectionProfileBeer()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    private func reloadCollectionProfileBeer(){
+        recomendationBeerCollectionView.reloadData()
+    }
+    
     private func setUpCollectionView(){
         configureRankingDataSource()
     }
@@ -155,7 +176,9 @@ extension DetailProfileViewController {
 extension DetailProfileViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let indexCell  = indexPath.row
-        print("celula selecionada \(indexCell)")
+        var openBeerVC = DetailBeerViewController()
+        openBeerVC.beerSelected = beersAPI[indexCell]
+        self.navigationController?.pushViewController(openBeerVC, animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize.init(width: view.frame.size.width/5+10, height: view.frame.size.width/5+10)
@@ -182,6 +205,9 @@ extension DetailProfileViewController: UICollectionViewDataSource {
         if let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: RecomendationCollectionViewCell.reuseIdentifier,
             for: indexPath) as? RecomendationCollectionViewCell{
+            for beer in self.beersAPI{
+                cell.beerImage = beer
+            }
             return cell
         } else {
             fatalError("Cannot create new cell")

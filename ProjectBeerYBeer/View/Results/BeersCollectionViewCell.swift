@@ -6,23 +6,24 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BeersCollectionViewCell: UICollectionViewCell {
+  
     static let reuseIdentifier = "list-cell-reuse-identifier"
     
-    lazy var labelCollectionViewCell : UILabel = {
-        let label = UILabel()
+    lazy var labelCollectionViewCell : UIImageView = {
+        let label = UIImageView()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.adjustsFontForContentSizeCategory = true
-        label.font = UIFont.preferredFont(forTextStyle: .body)
         label.layer.borderColor = UIColor.backgroundColorBlack.cgColor
         label.layer.borderWidth = 2
         return label
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
+        
     }
     required init?(coder: NSCoder) {
         fatalError("not implemented")
@@ -40,5 +41,20 @@ class BeersCollectionViewCell: UICollectionViewCell {
             labelCollectionViewCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
             labelCollectionViewCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)
         ])
+    }
+
+    var beerImage: Beer? {
+      didSet {
+          let imageBeer = beerImage?.image_url
+          if imageBeer != nil {
+              guard let imagePath = beerImage?.image_url else { return }
+              let url = "\(imagePath)"
+              if let beerImage = URL(string: url){
+                  labelCollectionViewCell.kf.setImage(with: beerImage)
+              }
+          } else {
+              labelCollectionViewCell.image = UIImage(named: "default")
+          }
+      }
     }
 }

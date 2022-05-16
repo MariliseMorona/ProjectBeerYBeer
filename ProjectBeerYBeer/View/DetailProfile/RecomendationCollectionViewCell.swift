@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RecomendationCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "recomendation-cell-reuse-identifier"
     
-    lazy var labelCollectionViewCell : UILabel = {
-        let label = UILabel()
+    lazy var labelCollectionViewCell : UIImageView = {
+        let label = UIImageView()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.layer.borderColor = UIColor.backgroundColorBlack.cgColor
         label.layer.borderWidth = 2
@@ -40,5 +41,19 @@ class RecomendationCollectionViewCell: UICollectionViewCell {
             labelCollectionViewCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             labelCollectionViewCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
         ])
+    }
+    var beerImage: Beer? {
+      didSet {
+          let imageBeer = beerImage?.image_url
+          if imageBeer != nil {
+              guard let imagePath = beerImage?.image_url else { return }
+              let url = "\(imagePath)"
+              if let beerImage = URL(string: url){
+                  labelCollectionViewCell.kf.setImage(with: beerImage)
+              }
+          } else {
+              labelCollectionViewCell.image = UIImage(named: "default")
+          }
+      }
     }
 }

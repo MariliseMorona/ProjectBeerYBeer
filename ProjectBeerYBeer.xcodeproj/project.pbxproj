@@ -14,7 +14,7 @@
 		4836CEFE282B264A00B42E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4836CEFD282B264A00B42E35 /* Assets.xcassets */; };
 		4836CF01282B264A00B42E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4836CEFF282B264A00B42E35 /* LaunchScreen.storyboard */; };
 		4836CF15282B287100B42E35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF14282B287100B42E35 /* LoginViewController.swift */; };
-		4836CF1A282B295C00B42E35 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF19282B295C00B42E35 /* LoginView.swift */; };
+		4836CF1A282B295C00B42E35 /* AccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF19282B295C00B42E35 /* AccessView.swift */; };
 		4836CF1E282B29D600B42E35 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF1D282B29D600B42E35 /* ResultsViewController.swift */; };
 		4836CF22282B2A1000B42E35 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF21282B2A1000B42E35 /* ProfileCollectionViewCell.swift */; };
 		4836CF24282B2A1D00B42E35 /* BeersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF23282B2A1D00B42E35 /* BeersCollectionViewCell.swift */; };
@@ -32,6 +32,15 @@
 		48972AF1283039830051FB6B /* License - READ THIS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 48972AEE283039830051FB6B /* License - READ THIS.txt */; };
 		48972AF2283039830051FB6B /* BrannbollFS_PERSONAL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48972AEF283039830051FB6B /* BrannbollFS_PERSONAL.ttf */; };
 		48972AF428303A080051FB6B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AF328303A080051FB6B /* File.swift */; };
+		48972AF8283042780051FB6B /* BeerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AF7283042780051FB6B /* BeerAPI.swift */; };
+		48972AFA283043740051FB6B /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AF9283043740051FB6B /* Beer.swift */; };
+		48972AFC283048B80051FB6B /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AFB283048B80051FB6B /* ApiError.swift */; };
+		48972AFF2830696D0051FB6B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 48972AFE2830696D0051FB6B /* Kingfisher */; };
+		48972B0328324EE70051FB6B /* LoginAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972B0228324EE70051FB6B /* LoginAnimationView.swift */; };
+		48972B05283257080051FB6B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972B04283257080051FB6B /* LoginView.swift */; };
+		48972B0728325A370051FB6B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972B0628325A370051FB6B /* User.swift */; };
+		48972B0928325BB40051FB6B /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972B0828325BB40051FB6B /* UserNetwork.swift */; };
+		48972B112832845E0051FB6B /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 48972B102832845E0051FB6B /* users.json */; };
 		48D5A2E0282C7EE100482743 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 48D5A2DF282C7EE100482743 /* Lottie */; };
 		48D5A2E2282C7F2D00482743 /* launchBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 48D5A2E1282C7F2D00482743 /* launchBeer.json */; };
 		48D5A2E4282C824E00482743 /* StarRatingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5A2E3282C824E00482743 /* StarRatingStackView.swift */; };
@@ -47,7 +56,7 @@
 		4836CF00282B264A00B42E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4836CF02282B264A00B42E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4836CF14282B287100B42E35 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4836CF19282B295C00B42E35 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4836CF19282B295C00B42E35 /* AccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessView.swift; sourceTree = "<group>"; };
 		4836CF1D282B29D600B42E35 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		4836CF21282B2A1000B42E35 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		4836CF23282B2A1D00B42E35 /* BeersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -65,6 +74,14 @@
 		48972AEE283039830051FB6B /* License - READ THIS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "License - READ THIS.txt"; sourceTree = "<group>"; };
 		48972AEF283039830051FB6B /* BrannbollFS_PERSONAL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrannbollFS_PERSONAL.ttf; sourceTree = "<group>"; };
 		48972AF328303A080051FB6B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		48972AF7283042780051FB6B /* BeerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAPI.swift; sourceTree = "<group>"; };
+		48972AF9283043740051FB6B /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		48972AFB283048B80051FB6B /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		48972B0228324EE70051FB6B /* LoginAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimationView.swift; sourceTree = "<group>"; };
+		48972B04283257080051FB6B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		48972B0628325A370051FB6B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		48972B0828325BB40051FB6B /* UserNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
+		48972B102832845E0051FB6B /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		48D5A2E1282C7F2D00482743 /* launchBeer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launchBeer.json; sourceTree = "<group>"; };
 		48D5A2E3282C824E00482743 /* StarRatingStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48972AFF2830696D0051FB6B /* Kingfisher in Frameworks */,
 				48D5A2E0282C7EE100482743 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +144,11 @@
 		4836CF16282B28BB00B42E35 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				48972AE728302C8D0051FB6B /* RegisterUserViewController.swift */,
+				4836CF2F282B2B2600B42E35 /* DetailBeerViewController.swift */,
+				4836CF26282B2A7D00B42E35 /* DetailProfileViewController.swift */,
+				4836CF1D282B29D600B42E35 /* ResultsViewController.swift */,
+				4836CF14282B287100B42E35 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -133,6 +156,10 @@
 		4836CF17282B28DA00B42E35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				48972AF62830424C0051FB6B /* Service */,
+				48972AF9283043740051FB6B /* Beer.swift */,
+				48972AFB283048B80051FB6B /* ApiError.swift */,
+				48972B0628325A370051FB6B /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,7 +167,6 @@
 		4836CF18282B28E600B42E35 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				48972AF528303C5C0051FB6B /* RegisterBeer */,
 				48972AE628302C740051FB6B /* RegisterUser */,
 				4836CF2E282B2AFF00B42E35 /* DetailBeer */,
 				4836CF25282B2A5D00B42E35 /* DetailProfile */,
@@ -153,7 +179,6 @@
 		4836CF1B282B29A100B42E35 /* Results */ = {
 			isa = PBXGroup;
 			children = (
-				4836CF1D282B29D600B42E35 /* ResultsViewController.swift */,
 				4836CF21282B2A1000B42E35 /* ProfileCollectionViewCell.swift */,
 				4836CF23282B2A1D00B42E35 /* BeersCollectionViewCell.swift */,
 			);
@@ -163,8 +188,9 @@
 		4836CF1C282B29AA00B42E35 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				4836CF14282B287100B42E35 /* LoginViewController.swift */,
-				4836CF19282B295C00B42E35 /* LoginView.swift */,
+				4836CF19282B295C00B42E35 /* AccessView.swift */,
+				48972B0228324EE70051FB6B /* LoginAnimationView.swift */,
+				48972B04283257080051FB6B /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -172,7 +198,6 @@
 		4836CF25282B2A5D00B42E35 /* DetailProfile */ = {
 			isa = PBXGroup;
 			children = (
-				4836CF26282B2A7D00B42E35 /* DetailProfileViewController.swift */,
 				4836CF28282B2AA200B42E35 /* InfoProfileView.swift */,
 				4836CF2A282B2AC700B42E35 /* RankingBeerCollectionViewCell.swift */,
 				4836CF2C282B2AE900B42E35 /* RecomendationCollectionViewCell.swift */,
@@ -183,7 +208,6 @@
 		4836CF2E282B2AFF00B42E35 /* DetailBeer */ = {
 			isa = PBXGroup;
 			children = (
-				4836CF2F282B2B2600B42E35 /* DetailBeerViewController.swift */,
 				4836CF31282B2B4F00B42E35 /* HeaderBeerView.swift */,
 				4836CF33282B2B8300B42E35 /* StarsGridTableViewCell.swift */,
 				48D5A2E3282C824E00482743 /* StarRatingStackView.swift */,
@@ -204,7 +228,6 @@
 		48972AE628302C740051FB6B /* RegisterUser */ = {
 			isa = PBXGroup;
 			children = (
-				48972AE728302C8D0051FB6B /* RegisterUserViewController.swift */,
 				48972AE9283030990051FB6B /* RegisterUserView.swift */,
 			);
 			path = RegisterUser;
@@ -229,11 +252,14 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
-		48972AF528303C5C0051FB6B /* RegisterBeer */ = {
+		48972AF62830424C0051FB6B /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				48972AF7283042780051FB6B /* BeerAPI.swift */,
+				48972B0828325BB40051FB6B /* UserNetwork.swift */,
+				48972B102832845E0051FB6B /* users.json */,
 			);
-			path = RegisterBeer;
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +280,7 @@
 			name = ProjectBeerYBeer;
 			packageProductDependencies = (
 				48D5A2DF282C7EE100482743 /* Lottie */,
+				48972AFE2830696D0051FB6B /* Kingfisher */,
 			);
 			productName = ProjectBeerYBeer;
 			productReference = 4836CEF1282B264900B42E35 /* ProjectBeerYBeer.app */;
@@ -285,6 +312,7 @@
 			mainGroup = 4836CEE8282B264900B42E35;
 			packageReferences = (
 				48D5A2DE282C7EE100482743 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				48972AFD2830696D0051FB6B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 4836CEF2282B264900B42E35 /* Products */;
 			projectDirPath = "";
@@ -300,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48972B112832845E0051FB6B /* users.json in Resources */,
 				48D5A2E2282C7F2D00482743 /* launchBeer.json in Resources */,
 				48972AF1283039830051FB6B /* License - READ THIS.txt in Resources */,
 				48972AF2283039830051FB6B /* BrannbollFS_PERSONAL.ttf in Resources */,
@@ -317,17 +346,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48972B0728325A370051FB6B /* User.swift in Sources */,
 				4836CF29282B2AA200B42E35 /* InfoProfileView.swift in Sources */,
+				48972AFA283043740051FB6B /* Beer.swift in Sources */,
 				48234F77282B3606005FC820 /* Colors.swift in Sources */,
 				4836CF24282B2A1D00B42E35 /* BeersCollectionViewCell.swift in Sources */,
 				4836CF15282B287100B42E35 /* LoginViewController.swift in Sources */,
+				48972AFC283048B80051FB6B /* ApiError.swift in Sources */,
 				4836CF34282B2B8300B42E35 /* StarsGridTableViewCell.swift in Sources */,
 				48972AF428303A080051FB6B /* File.swift in Sources */,
 				4836CEF5282B264900B42E35 /* AppDelegate.swift in Sources */,
-				4836CF1A282B295C00B42E35 /* LoginView.swift in Sources */,
+				48972B0328324EE70051FB6B /* LoginAnimationView.swift in Sources */,
+				4836CF1A282B295C00B42E35 /* AccessView.swift in Sources */,
 				4836CF22282B2A1000B42E35 /* ProfileCollectionViewCell.swift in Sources */,
 				48972AEA283030990051FB6B /* RegisterUserView.swift in Sources */,
+				48972B05283257080051FB6B /* LoginView.swift in Sources */,
+				48972B0928325BB40051FB6B /* UserNetwork.swift in Sources */,
 				4836CF27282B2A7D00B42E35 /* DetailProfileViewController.swift in Sources */,
+				48972AF8283042780051FB6B /* BeerAPI.swift in Sources */,
 				48972AE828302C8D0051FB6B /* RegisterUserViewController.swift in Sources */,
 				4836CF1E282B29D600B42E35 /* ResultsViewController.swift in Sources */,
 				4836CF32282B2B4F00B42E35 /* HeaderBeerView.swift in Sources */,
@@ -546,6 +582,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		48972AFD2830696D0051FB6B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		48D5A2DE282C7EE100482743 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -557,6 +601,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		48972AFE2830696D0051FB6B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48972AFD2830696D0051FB6B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		48D5A2DF282C7EE100482743 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 48D5A2DE282C7EE100482743 /* XCRemoteSwiftPackageReference "lottie-ios" */;

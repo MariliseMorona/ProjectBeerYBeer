@@ -2,73 +2,55 @@
 //  LoginView.swift
 //  ProjectBeerYBeer
 //
-//  Created by Marilise Morona on 10/05/22.
+//  Created by Marilise Morona on 16/05/22.
 //
 
 import UIKit
 
 class LoginView: UIView {
-
-    lazy var stackView : UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [userNameTextField, dividerView, passwordTextField])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.spacing = 8
-        stackView.backgroundColor = .clear
-        return stackView
-    }()
     
-    let userNameTextField = UITextField.textField(placeholder: "Login", backgroundColor: .backgroundColorWhite, textColor: .backgroundColorGrayLight)
-    lazy var dividerView : UIView = {
-        let dividerView = UIView()
-        dividerView.translatesAutoresizingMaskIntoConstraints = false
-        dividerView.backgroundColor = .backgroundColorGradyMed
-        return dividerView
-    }()
-    let passwordTextField = UITextField.textField(placeholder: "Password", backgroundColor: .backgroundColorWhite, textColor: .backgroundColorGrayLight)
-
+    let animationView = LoginAnimationView()
+    let accessView = AccessView()
+    let errorMessageLabel = UILabel.label()
+    let signInButton = UIButton.button(setTitle: "Sign In", backgroundColor: .backgroundColorBlack)
+    let newUserButton = UIButton.button(setTitle: "New user?", backgroundColor: .clear)
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
-        
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    private func setUp(){
-        addSubview(stackView)
-        constraintLayout()
-        
+    func setUp() {
+        addSubview(animationView)
+        addSubview(accessView)
+        addSubview(errorMessageLabel)
+        addSubview(signInButton)
+        addSubview(newUserButton)
+        constrains()
     }
-    
-    private func constraintLayout(){
-        translatesAutoresizingMaskIntoConstraints = false
-        
+    func constrains() {
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        accessView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 1),
-            stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 0),
-            trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 0),
-            bottomAnchor.constraint(equalToSystemSpacingBelow: stackView.bottomAnchor, multiplier: 1)
+            animationView.topAnchor.constraint(equalTo: topAnchor, constant: 100),
+            animationView.heightAnchor.constraint(equalToConstant: 180),
+            animationView.widthAnchor.constraint(equalToConstant: 180),
+            animationView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            accessView.topAnchor.constraint(equalTo: animationView.bottomAnchor, constant: 300),
+            accessView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            accessView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            errorMessageLabel.topAnchor.constraint(equalTo: accessView.bottomAnchor, constant: 10),
+            errorMessageLabel.leadingAnchor.constraint(equalTo: accessView.leadingAnchor),
+            errorMessageLabel.trailingAnchor.constraint(equalTo: accessView.trailingAnchor),
+            signInButton.topAnchor.constraint(equalTo: errorMessageLabel.bottomAnchor, constant: 10),
+            signInButton.leadingAnchor.constraint(equalTo: errorMessageLabel.leadingAnchor),
+            signInButton.trailingAnchor.constraint(equalTo: errorMessageLabel.trailingAnchor),
+            signInButton.heightAnchor.constraint(equalToConstant: 40),
+            newUserButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
+            newUserButton.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
+            newUserButton.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
         ])
-        dividerView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        userNameTextField.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        passwordTextField.heightAnchor.constraint(equalToConstant: 35).isActive = true
     }
 }
-
-extension LoginView: UITextFieldDelegate{
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        userNameTextField.endEditing(true)
-        passwordTextField.endEditing(true)
-        return true
-    }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-       return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-    }
-}
-

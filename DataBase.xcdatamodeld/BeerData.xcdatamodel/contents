@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BeerData" representedClassName="BeerData" syncable="YES" codeGenerationType="class">
+        <attribute name="dataABV" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="dataAttenuationLevel" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="dataBrewersTips" optional="YES" attributeType="String"/>
+        <attribute name="dataConttributedBy" optional="YES" attributeType="String"/>
+        <attribute name="dataDescription" optional="YES" attributeType="String"/>
+        <attribute name="dataEBC" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dataFirstBrewed" optional="YES" attributeType="String"/>
+        <attribute name="dataFoodPairing" optional="YES" attributeType="String"/>
+        <attribute name="dataIBU" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dataID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dataImageURL" optional="YES" attributeType="String"/>
+        <attribute name="dataIngredients" optional="YES"/>
+        <attribute name="dataMethod" optional="YES"/>
+        <attribute name="dataName" optional="YES" attributeType="String"/>
+        <attribute name="dataPH" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="dataSRM" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="dataTagline" optional="YES" attributeType="String"/>
+        <attribute name="dataTargetFG" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dataTargetOG" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientsBeerData"/>
+        <relationship name="method" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MethodBeerData"/>
+        <relationship name="volume" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BoilVolumeBeerData"/>
+    </entity>
+    <entity name="BoilVolumeBeerData" representedClassName="BoilVolumeBeerData" syncable="YES" codeGenerationType="class">
+        <attribute name="unitBoilData" optional="YES" attributeType="String"/>
+        <attribute name="valueBoilData" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="FermentationBeerData" representedClassName="FermentationBeerData" syncable="YES" codeGenerationType="class">
+        <attribute name="tempFermentationData" optional="YES"/>
+        <relationship name="temp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BoilVolumeBeerData"/>
+    </entity>
+    <entity name="HopBeerData" representedClassName="HopBeerData" syncable="YES" codeGenerationType="class">
+        <attribute name="addHopData" optional="YES" attributeType="String"/>
+        <attribute name="amountHopData" optional="YES"/>
+        <attribute name="attributeHopData" optional="YES" attributeType="String"/>
+        <attribute name="nameHopData" optional="YES" attributeType="String"/>
+        <relationship name="volume" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BoilVolumeBeerData"/>
+    </entity>
+    <entity name="IngredientsBeerData" representedClassName="IngredientsBeerData" syncable="YES" codeGenerationType="class">
+        <attribute name="hopsIngredientesData" optional="YES"/>
+        <attribute name="maltIngredientsData" optional="YES"/>
+        <attribute name="yeastIngredientsData" optional="YES" attributeType="String"/>
+        <relationship name="hop" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HopBeerData"/>
+        <relationship name="malt" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MaltBeerData"/>
+    </entity>
+    <entity name="MaltBeerData" representedClassName="MaltBeerData" syncable="YES" codeGenerationType="class">
+        <attribute name="amountMaltData" optional="YES"/>
+        <attribute name="nameMaltData" optional="YES" attributeType="String"/>
+        <relationship name="volume" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BoilVolumeBeerData"/>
+    </entity>
+    <entity name="MashTempBeerData" representedClassName="MashTempBeerData" syncable="YES" codeGenerationType="class">
+        <attribute name="durationBeerData" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tempBeerData" optional="YES"/>
+        <relationship name="temp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BoilVolumeBeerData"/>
+    </entity>
+    <entity name="MethodBeerData" representedClassName="MethodBeerData" syncable="YES" codeGenerationType="class">
+        <attribute name="fermentationMethodData" optional="YES"/>
+        <attribute name="mashTempMethodData" optional="YES"/>
+        <attribute name="twistMethodData" optional="YES" attributeType="String"/>
+        <relationship name="fermentation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FermentationBeerData"/>
+        <relationship name="mashTemp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MashTempBeerData"/>
+    </entity>
+    <elements>
+        <element name="BeerData" positionX="-317.1327209472656" positionY="-167.1239624023438" width="160.8618469238281" height="373"/>
+        <element name="MethodBeerData" positionX="115.3086547851562" positionY="-115.2031555175781" width="128" height="118"/>
+        <element name="BoilVolumeBeerData" positionX="267.7243041992188" positionY="-198.4635467529297" width="128" height="59"/>
+        <element name="IngredientsBeerData" positionX="274.0396728515625" positionY="-79.60977172851562" width="128" height="118"/>
+        <element name="HopBeerData" positionX="174.9122314453125" positionY="125.5388488769531" width="128" height="118"/>
+        <element name="MaltBeerData" positionX="172.969482421875" positionY="277.6251220703125" width="128" height="88"/>
+        <element name="FermentationBeerData" positionX="192.4048461914062" positionY="221.7595520019531" width="128" height="73"/>
+        <element name="MashTempBeerData" positionX="314.6686401367188" positionY="8.904403686523438" width="128" height="88"/>
+    </elements>
+</model>
