@@ -10,7 +10,6 @@
 		48234F75282B35EE005FC820 /* loginBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 48234F74282B35EE005FC820 /* loginBeer.json */; };
 		48234F77282B3606005FC820 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48234F76282B3606005FC820 /* Colors.swift */; };
 		4836CEF5282B264900B42E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CEF4282B264900B42E35 /* AppDelegate.swift */; };
-		4836CEF7282B264900B42E35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CEF6282B264900B42E35 /* SceneDelegate.swift */; };
 		4836CEFE282B264A00B42E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4836CEFD282B264A00B42E35 /* Assets.xcassets */; };
 		4836CF01282B264A00B42E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4836CEFF282B264A00B42E35 /* LaunchScreen.storyboard */; };
 		4836CF15282B287100B42E35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF14282B287100B42E35 /* LoginViewController.swift */; };
@@ -51,7 +50,6 @@
 		48234F76282B3606005FC820 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		4836CEF1282B264900B42E35 /* ProjectBeerYBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectBeerYBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4836CEF4282B264900B42E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4836CEF6282B264900B42E35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4836CEFD282B264A00B42E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4836CF00282B264A00B42E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4836CF02282B264A00B42E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 				4836CF17282B28DA00B42E35 /* Model */,
 				4836CF16282B28BB00B42E35 /* Controller */,
 				4836CEF4282B264900B42E35 /* AppDelegate.swift */,
-				4836CEF6282B264900B42E35 /* SceneDelegate.swift */,
 				4836CEFD282B264A00B42E35 /* Assets.xcassets */,
 				4836CEFF282B264A00B42E35 /* LaunchScreen.storyboard */,
 				4836CF02282B264A00B42E35 /* Info.plist */,
@@ -367,7 +364,6 @@
 				48972AE828302C8D0051FB6B /* RegisterUserViewController.swift in Sources */,
 				4836CF1E282B29D600B42E35 /* ResultsViewController.swift in Sources */,
 				4836CF32282B2B4F00B42E35 /* HeaderBeerView.swift in Sources */,
-				4836CEF7282B264900B42E35 /* SceneDelegate.swift in Sources */,
 				4836CF30282B2B2600B42E35 /* DetailBeerViewController.swift in Sources */,
 				48D5A2E4282C824E00482743 /* StarRatingStackView.swift in Sources */,
 				4836CF2B282B2AC700B42E35 /* RankingBeerCollectionViewCell.swift in Sources */,
