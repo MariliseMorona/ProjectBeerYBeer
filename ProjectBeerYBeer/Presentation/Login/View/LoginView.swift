@@ -9,7 +9,7 @@ import UIKit
 
 class LoginView: UIView {
     
-    let animationView = LoginAnimationView()
+//    let animationView = LoginAnimationView()
     let accessView = AccessView()
     let errorMessageLabel = UILabel.label()
     let signInButton = UIButton.button(setTitle: "Sign In", backgroundColor: .backgroundColorBlack)
@@ -23,7 +23,7 @@ class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     func setUp() {
-        addSubview(animationView)
+//        addSubview(animationView)
         addSubview(accessView)
         addSubview(errorMessageLabel)
         addSubview(signInButton)
@@ -31,15 +31,15 @@ class LoginView: UIView {
         constrains()
     }
     func constrains() {
-        animationView.translatesAutoresizingMaskIntoConstraints = false
+//        animationView.translatesAutoresizingMaskIntoConstraints = false
         accessView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            animationView.topAnchor.constraint(equalTo: topAnchor, constant: 100),
-            animationView.heightAnchor.constraint(equalToConstant: 180),
-            animationView.widthAnchor.constraint(equalToConstant: 180),
-            animationView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            accessView.topAnchor.constraint(equalTo: animationView.bottomAnchor, constant: 300),
-            accessView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+//            animationView.topAnchor.constraint(equalTo: topAnchor, constant: 100),
+//            animationView.heightAnchor.constraint(equalToConstant: 180),
+//            animationView.widthAnchor.constraint(equalToConstant: 180),
+//            animationView.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            accessView.topAnchor.constraint(equalTo: animationView.bottomAnchor, constant: 300),
+//            accessView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             accessView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             errorMessageLabel.topAnchor.constraint(equalTo: accessView.bottomAnchor, constant: 10),
             errorMessageLabel.leadingAnchor.constraint(equalTo: accessView.leadingAnchor),

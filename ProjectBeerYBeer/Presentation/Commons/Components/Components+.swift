@@ -46,7 +46,6 @@ extension UIButton{
         signInButton.setTitle(setTitle, for: [])
         signInButton.configuration = .filled()
         signInButton.configuration?.imagePadding = 8
-//        signInButton.addTarget(self, action: #selector(signInTapped(sender:)), for: .primaryActionTriggered)
         signInButton.tintColor = backgroundColor
         signInButton.layer.cornerRadius = 4
         return signInButton

@@ -24,22 +24,26 @@
 		4836CF30282B2B2600B42E35 /* DetailBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF2F282B2B2600B42E35 /* DetailBeerViewController.swift */; };
 		4836CF32282B2B4F00B42E35 /* HeaderBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF31282B2B4F00B42E35 /* HeaderBeerView.swift */; };
 		4836CF34282B2B8300B42E35 /* StarsGridTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836CF33282B2B8300B42E35 /* StarsGridTableViewCell.swift */; };
-		48972AE5283020880051FB6B /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AE4283020880051FB6B /* Components.swift */; };
+		48972AE5283020880051FB6B /* Components+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AE4283020880051FB6B /* Components+.swift */; };
 		48972AE828302C8D0051FB6B /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AE728302C8D0051FB6B /* RegisterUserViewController.swift */; };
 		48972AEA283030990051FB6B /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AE9283030990051FB6B /* RegisterUserView.swift */; };
 		48972AF0283039830051FB6B /* BrannbollSS_PERSONAL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48972AED283039830051FB6B /* BrannbollSS_PERSONAL.ttf */; };
 		48972AF1283039830051FB6B /* License - READ THIS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 48972AEE283039830051FB6B /* License - READ THIS.txt */; };
 		48972AF2283039830051FB6B /* BrannbollFS_PERSONAL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48972AEF283039830051FB6B /* BrannbollFS_PERSONAL.ttf */; };
-		48972AF428303A080051FB6B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AF328303A080051FB6B /* File.swift */; };
 		48972AF8283042780051FB6B /* BeerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AF7283042780051FB6B /* BeerAPI.swift */; };
 		48972AFA283043740051FB6B /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AF9283043740051FB6B /* Beer.swift */; };
 		48972AFC283048B80051FB6B /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972AFB283048B80051FB6B /* ApiError.swift */; };
 		48972AFF2830696D0051FB6B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 48972AFE2830696D0051FB6B /* Kingfisher */; };
-		48972B0328324EE70051FB6B /* LoginAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972B0228324EE70051FB6B /* LoginAnimationView.swift */; };
 		48972B05283257080051FB6B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972B04283257080051FB6B /* LoginView.swift */; };
 		48972B0728325A370051FB6B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972B0628325A370051FB6B /* User.swift */; };
 		48972B0928325BB40051FB6B /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48972B0828325BB40051FB6B /* UserNetwork.swift */; };
 		48972B112832845E0051FB6B /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 48972B102832845E0051FB6B /* users.json */; };
+		48C8A8A929DBA28E00CC2511 /* OnlyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8A8A829DBA28E00CC2511 /* OnlyTableView.swift */; };
+		48C8A8AC29DBA2CD00CC2511 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 48C8A8AB29DBA2CD00CC2511 /* SnapKit */; };
+		48C8A8AE29DBA30A00CC2511 /* CodableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8A8AD29DBA30A00CC2511 /* CodableView.swift */; };
+		48C8A8B229DBA63A00CC2511 /* FormsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8A8B129DBA63A00CC2511 /* FormsTableViewCell.swift */; };
+		48C8A8B429DBAC5A00CC2511 /* OnlyBtnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8A8B329DBAC5A00CC2511 /* OnlyBtnTableViewCell.swift */; };
+		48C8A8B629DBAF4C00CC2511 /* CircleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C8A8B529DBAF4C00CC2511 /* CircleTableViewCell.swift */; };
 		48D5A2E0282C7EE100482743 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 48D5A2DF282C7EE100482743 /* Lottie */; };
 		48D5A2E2282C7F2D00482743 /* launchBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 48D5A2E1282C7F2D00482743 /* launchBeer.json */; };
 		48D5A2E4282C824E00482743 /* StarRatingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5A2E3282C824E00482743 /* StarRatingStackView.swift */; };
@@ -65,21 +69,24 @@
 		4836CF2F282B2B2600B42E35 /* DetailBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBeerViewController.swift; sourceTree = "<group>"; };
 		4836CF31282B2B4F00B42E35 /* HeaderBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBeerView.swift; sourceTree = "<group>"; };
 		4836CF33282B2B8300B42E35 /* StarsGridTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsGridTableViewCell.swift; sourceTree = "<group>"; };
-		48972AE4283020880051FB6B /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		48972AE4283020880051FB6B /* Components+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Components+.swift"; sourceTree = "<group>"; };
 		48972AE728302C8D0051FB6B /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		48972AE9283030990051FB6B /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
 		48972AED283039830051FB6B /* BrannbollSS_PERSONAL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrannbollSS_PERSONAL.ttf; sourceTree = "<group>"; };
 		48972AEE283039830051FB6B /* License - READ THIS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "License - READ THIS.txt"; sourceTree = "<group>"; };
 		48972AEF283039830051FB6B /* BrannbollFS_PERSONAL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BrannbollFS_PERSONAL.ttf; sourceTree = "<group>"; };
-		48972AF328303A080051FB6B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		48972AF7283042780051FB6B /* BeerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAPI.swift; sourceTree = "<group>"; };
 		48972AF9283043740051FB6B /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		48972AFB283048B80051FB6B /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
-		48972B0228324EE70051FB6B /* LoginAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimationView.swift; sourceTree = "<group>"; };
 		48972B04283257080051FB6B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		48972B0628325A370051FB6B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		48972B0828325BB40051FB6B /* UserNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
 		48972B102832845E0051FB6B /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		48C8A8A829DBA28E00CC2511 /* OnlyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyTableView.swift; sourceTree = "<group>"; };
+		48C8A8AD29DBA30A00CC2511 /* CodableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableView.swift; sourceTree = "<group>"; };
+		48C8A8B129DBA63A00CC2511 /* FormsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsTableViewCell.swift; sourceTree = "<group>"; };
+		48C8A8B329DBAC5A00CC2511 /* OnlyBtnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyBtnTableViewCell.swift; sourceTree = "<group>"; };
+		48C8A8B529DBAF4C00CC2511 /* CircleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTableViewCell.swift; sourceTree = "<group>"; };
 		48D5A2E1282C7F2D00482743 /* launchBeer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launchBeer.json; sourceTree = "<group>"; };
 		48D5A2E3282C824E00482743 /* StarRatingStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C8A8AC29DBA2CD00CC2511 /* SnapKit in Frameworks */,
 				48972AFF2830696D0051FB6B /* Kingfisher in Frameworks */,
 				48D5A2E0282C7EE100482743 /* Lottie in Frameworks */,
 			);
@@ -97,13 +105,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		48234F73282B35D8005FC820 /* Files */ = {
+		48234F73282B35D8005FC820 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				48972AEC283039610051FB6B /* Animations */,
 				48972AEB283039560051FB6B /* Fonts */,
 			);
-			path = Files;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		4836CEE8282B264900B42E35 = {
@@ -125,10 +133,10 @@
 		4836CEF3282B264900B42E35 /* ProjectBeerYBeer */ = {
 			isa = PBXGroup;
 			children = (
-				48234F73282B35D8005FC820 /* Files */,
-				4836CF35282B2BB700B42E35 /* Commons */,
+				48C8A8A229DBA1E100CC2511 /* Presentation */,
 				4836CF18282B28E600B42E35 /* View */,
-				4836CF17282B28DA00B42E35 /* Model */,
+				48972AF62830424C0051FB6B /* Network */,
+				4836CF17282B28DA00B42E35 /* Data */,
 				4836CF16282B28BB00B42E35 /* Controller */,
 				4836CEF4282B264900B42E35 /* AppDelegate.swift */,
 				4836CEFD282B264A00B42E35 /* Assets.xcassets */,
@@ -145,20 +153,18 @@
 				4836CF2F282B2B2600B42E35 /* DetailBeerViewController.swift */,
 				4836CF26282B2A7D00B42E35 /* DetailProfileViewController.swift */,
 				4836CF1D282B29D600B42E35 /* ResultsViewController.swift */,
-				4836CF14282B287100B42E35 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		4836CF17282B28DA00B42E35 /* Model */ = {
+		4836CF17282B28DA00B42E35 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				48972AF62830424C0051FB6B /* Service */,
 				48972AF9283043740051FB6B /* Beer.swift */,
 				48972AFB283048B80051FB6B /* ApiError.swift */,
 				48972B0628325A370051FB6B /* User.swift */,
 			);
-			path = Model;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		4836CF18282B28E600B42E35 /* View */ = {
@@ -167,7 +173,6 @@
 				48972AE628302C740051FB6B /* RegisterUser */,
 				4836CF2E282B2AFF00B42E35 /* DetailBeer */,
 				4836CF25282B2A5D00B42E35 /* DetailProfile */,
-				4836CF1C282B29AA00B42E35 /* Login */,
 				4836CF1B282B29A100B42E35 /* Results */,
 			);
 			path = View;
@@ -180,16 +185,6 @@
 				4836CF23282B2A1D00B42E35 /* BeersCollectionViewCell.swift */,
 			);
 			path = Results;
-			sourceTree = "<group>";
-		};
-		4836CF1C282B29AA00B42E35 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				4836CF19282B295C00B42E35 /* AccessView.swift */,
-				48972B0228324EE70051FB6B /* LoginAnimationView.swift */,
-				48972B04283257080051FB6B /* LoginView.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		4836CF25282B2A5D00B42E35 /* DetailProfile */ = {
@@ -210,16 +205,6 @@
 				48D5A2E3282C824E00482743 /* StarRatingStackView.swift */,
 			);
 			path = DetailBeer;
-			sourceTree = "<group>";
-		};
-		4836CF35282B2BB700B42E35 /* Commons */ = {
-			isa = PBXGroup;
-			children = (
-				48234F76282B3606005FC820 /* Colors.swift */,
-				48972AE4283020880051FB6B /* Components.swift */,
-				48972AF328303A080051FB6B /* File.swift */,
-			);
-			path = Commons;
 			sourceTree = "<group>";
 		};
 		48972AE628302C740051FB6B /* RegisterUser */ = {
@@ -249,14 +234,88 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
-		48972AF62830424C0051FB6B /* Service */ = {
+		48972AF62830424C0051FB6B /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				48972AF7283042780051FB6B /* BeerAPI.swift */,
 				48972B0828325BB40051FB6B /* UserNetwork.swift */,
 				48972B102832845E0051FB6B /* users.json */,
 			);
-			path = Service;
+			path = Network;
+			sourceTree = "<group>";
+		};
+		48C8A8A229DBA1E100CC2511 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				48C8A8A629DBA22B00CC2511 /* Commons */,
+				48C8A8A329DBA1F200CC2511 /* Login */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		48C8A8A329DBA1F200CC2511 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				48C8A8A529DBA20000CC2511 /* ViewModel */,
+				48C8A8A429DBA1F900CC2511 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		48C8A8A429DBA1F900CC2511 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4836CF19282B295C00B42E35 /* AccessView.swift */,
+				48972B04283257080051FB6B /* LoginView.swift */,
+				4836CF14282B287100B42E35 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48C8A8A529DBA20000CC2511 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48C8A8A629DBA22B00CC2511 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				48234F73282B35D8005FC820 /* Resources */,
+				48C8A8A729DBA23400CC2511 /* Components */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		48C8A8A729DBA23400CC2511 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				48C8A8B029DBA60D00CC2511 /* Cells */,
+				48C8A8AF29DBA32400CC2511 /* Interfaces */,
+				48C8A8A829DBA28E00CC2511 /* OnlyTableView.swift */,
+				48972AE4283020880051FB6B /* Components+.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		48C8A8AF29DBA32400CC2511 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				48234F76282B3606005FC820 /* Colors.swift */,
+				48C8A8AD29DBA30A00CC2511 /* CodableView.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		48C8A8B029DBA60D00CC2511 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				48C8A8B129DBA63A00CC2511 /* FormsTableViewCell.swift */,
+				48C8A8B329DBAC5A00CC2511 /* OnlyBtnTableViewCell.swift */,
+				48C8A8B529DBAF4C00CC2511 /* CircleTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +337,7 @@
 			packageProductDependencies = (
 				48D5A2DF282C7EE100482743 /* Lottie */,
 				48972AFE2830696D0051FB6B /* Kingfisher */,
+				48C8A8AB29DBA2CD00CC2511 /* SnapKit */,
 			);
 			productName = ProjectBeerYBeer;
 			productReference = 4836CEF1282B264900B42E35 /* ProjectBeerYBeer.app */;
@@ -310,6 +370,7 @@
 			packageReferences = (
 				48D5A2DE282C7EE100482743 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				48972AFD2830696D0051FB6B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				48C8A8AA29DBA2CD00CC2511 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 4836CEF2282B264900B42E35 /* Products */;
 			projectDirPath = "";
@@ -348,12 +409,14 @@
 				48972AFA283043740051FB6B /* Beer.swift in Sources */,
 				48234F77282B3606005FC820 /* Colors.swift in Sources */,
 				4836CF24282B2A1D00B42E35 /* BeersCollectionViewCell.swift in Sources */,
+				48C8A8B229DBA63A00CC2511 /* FormsTableViewCell.swift in Sources */,
 				4836CF15282B287100B42E35 /* LoginViewController.swift in Sources */,
 				48972AFC283048B80051FB6B /* ApiError.swift in Sources */,
 				4836CF34282B2B8300B42E35 /* StarsGridTableViewCell.swift in Sources */,
-				48972AF428303A080051FB6B /* File.swift in Sources */,
 				4836CEF5282B264900B42E35 /* AppDelegate.swift in Sources */,
-				48972B0328324EE70051FB6B /* LoginAnimationView.swift in Sources */,
+				48C8A8A929DBA28E00CC2511 /* OnlyTableView.swift in Sources */,
+				48C8A8B429DBAC5A00CC2511 /* OnlyBtnTableViewCell.swift in Sources */,
+				48C8A8B629DBAF4C00CC2511 /* CircleTableViewCell.swift in Sources */,
 				4836CF1A282B295C00B42E35 /* AccessView.swift in Sources */,
 				4836CF22282B2A1000B42E35 /* ProfileCollectionViewCell.swift in Sources */,
 				48972AEA283030990051FB6B /* RegisterUserView.swift in Sources */,
@@ -363,12 +426,13 @@
 				48972AF8283042780051FB6B /* BeerAPI.swift in Sources */,
 				48972AE828302C8D0051FB6B /* RegisterUserViewController.swift in Sources */,
 				4836CF1E282B29D600B42E35 /* ResultsViewController.swift in Sources */,
+				48C8A8AE29DBA30A00CC2511 /* CodableView.swift in Sources */,
 				4836CF32282B2B4F00B42E35 /* HeaderBeerView.swift in Sources */,
 				4836CF30282B2B2600B42E35 /* DetailBeerViewController.swift in Sources */,
 				48D5A2E4282C824E00482743 /* StarRatingStackView.swift in Sources */,
 				4836CF2B282B2AC700B42E35 /* RankingBeerCollectionViewCell.swift in Sources */,
 				4836CF2D282B2AE900B42E35 /* RecomendationCollectionViewCell.swift in Sources */,
-				48972AE5283020880051FB6B /* Components.swift in Sources */,
+				48972AE5283020880051FB6B /* Components+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +650,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		48C8A8AA29DBA2CD00CC2511 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		48D5A2DE282C7EE100482743 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -601,6 +673,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 48972AFD2830696D0051FB6B /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		48C8A8AB29DBA2CD00CC2511 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48C8A8AA29DBA2CD00CC2511 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 		48D5A2DF282C7EE100482743 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
