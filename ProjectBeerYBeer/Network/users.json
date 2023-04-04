@@ -1,0 +1,30 @@
+{
+    "users": [
+        {
+            "name": "Carla",
+            "password": "Carla",
+            "img_profile": "carla"
+        },
+        {
+            "name": "Julio",
+            "password": "Julio",
+            "img_profile": "julio"
+        },
+        {
+            "name": "Kevin",
+            "password": "Kevin",
+            "img_profile": "kevin"
+        },
+        {
+            "name": "Lucas",
+            "password": "Lucas",
+            "img_profile": "lucas"
+        },
+        {
+            "name": "Ana",
+            "password": "Ana",
+            "img_profile": "ana"
+        }
+    ]
+    
+}
